@@ -152,6 +152,24 @@
     }
 
     /* =========================
+       ABOUT / BRAND STORY
+    ========================= */
+
+    .about {
+      background: #0f0f0f;
+      border-top: 1px solid rgba(255,255,255,.06);
+      border-bottom: 1px solid rgba(255,255,255,.06);
+      padding: 90px 0;
+    }
+
+    .about-text {
+      max-width: 800px;
+      color: #aaa39d;
+      font-size: 18px;
+      line-height: 1.9;
+    }
+
+    /* =========================
        SHIPPING
     ========================= */
 
@@ -301,23 +319,6 @@
 
     .add-btn:hover {
       opacity: .85;
-    }
-
-    /* =========================
-       ABOUT
-    ========================= */
-
-    .about {
-      background: #0f0f0f;
-      border-top: 1px solid rgba(255,255,255,.06);
-      border-bottom: 1px solid rgba(255,255,255,.06);
-    }
-
-    .about-text {
-      max-width: 800px;
-      color: #aaa39d;
-      font-size: 18px;
-      line-height: 1.9;
     }
 
     /* =========================
@@ -844,6 +845,14 @@
         font-size: 10px;
         letter-spacing: 2px;
       }
+
+      .about {
+        padding: 70px 0;
+      }
+
+      .about-text {
+        font-size: 16px;
+      }
     }
   </style>
 </head>
@@ -856,6 +865,7 @@
 
   <header>
     <div class="container nav">
+
       <a href="#" class="logo">
         OBSESSION
         <span>FRAGRANCE</span>
@@ -867,8 +877,10 @@
       >
         BAG <span id="cartCount">0</span>
       </button>
+
     </div>
   </header>
+
 
   <main>
 
@@ -877,7 +889,9 @@
     ========================= -->
 
     <section class="hero">
+
       <div>
+
         <div class="eyebrow">
           Obsession Fragrance
         </div>
@@ -898,51 +912,16 @@
         >
           ENTER THE OBSESSION
         </a>
-      </div>
-    </section>
-
-    <!-- =========================
-         FREE SHIPPING
-    ========================= -->
-
-    <div class="shipping-banner">
-      FREE SHIPPING
-      <span>ABOVE 2000 EGP</span>
-    </div>
-
-    <!-- =========================
-         COLLECTION
-    ========================= -->
-
-    <section id="collection">
-
-      <div class="container">
-
-        <div class="section-title">
-          <small>
-            The Collection
-          </small>
-
-          <h2>
-            Choose Your Obsession.
-          </h2>
-        </div>
-
-        <div
-          id="products"
-          class="products"
-        >
-          <div class="empty">
-            Loading the collection...
-          </div>
-        </div>
 
       </div>
 
     </section>
 
+
     <!-- =========================
-         ABOUT
+         BRAND STORY
+         THIS IS NOW DIRECTLY
+         AFTER THE HERO
     ========================= -->
 
     <section class="about">
@@ -950,6 +929,7 @@
       <div class="container">
 
         <div class="section-title">
+
           <small>
             Our Story
           </small>
@@ -957,6 +937,7 @@
           <h2>
             Made From Obsession.
           </h2>
+
         </div>
 
         <p class="about-text">
@@ -970,7 +951,59 @@
 
     </section>
 
+
+    <!-- =========================
+         FREE SHIPPING
+    ========================= -->
+
+    <div class="shipping-banner">
+
+      FREE SHIPPING
+
+      <span>
+        ABOVE 2000 EGP
+      </span>
+
+    </div>
+
+
+    <!-- =========================
+         COLLECTION
+    ========================= -->
+
+    <section id="collection">
+
+      <div class="container">
+
+        <div class="section-title">
+
+          <small>
+            The Collection
+          </small>
+
+          <h2>
+            Choose Your Obsession.
+          </h2>
+
+        </div>
+
+        <div
+          id="products"
+          class="products"
+        >
+
+          <div class="empty">
+            Loading the collection...
+          </div>
+
+        </div>
+
+      </div>
+
+    </section>
+
   </main>
+
 
   <!-- =========================
        FOOTER
@@ -996,6 +1029,7 @@
 
   </footer>
 
+
   <!-- =========================
        PRODUCT DETAILS
   ========================= -->
@@ -1019,6 +1053,7 @@
     </div>
 
   </div>
+
 
   <!-- =========================
        CART
@@ -1054,6 +1089,7 @@
 
   </div>
 
+
   <!-- =========================
        CHECKOUT
   ========================= -->
@@ -1077,6 +1113,7 @@
     </div>
 
   </div>
+
 
   <script>
 
@@ -1331,6 +1368,7 @@
             <div class="stats">
 
               <div class="stat">
+
                 <span>
                   Volume
                 </span>
@@ -1338,9 +1376,11 @@
                 <strong>
                   50 ML
                 </strong>
+
               </div>
 
               <div class="stat">
+
                 <span>
                   Intensity
                 </span>
@@ -1348,9 +1388,11 @@
                 <strong>
                   High
                 </strong>
+
               </div>
 
               <div class="stat">
+
                 <span>
                   Projection
                 </span>
@@ -1358,9 +1400,11 @@
                 <strong>
                   Strong
                 </strong>
+
               </div>
 
               <div class="stat">
+
                 <span>
                   Longevity
                 </span>
@@ -1368,6 +1412,7 @@
                 <strong>
                   Long Lasting
                 </strong>
+
               </div>
 
             </div>
@@ -2473,7 +2518,6 @@
 
         } catch (emailError) {
 
-          // Email failure must NOT cancel the order.
           console.error(
             "EMAIL FUNCTION ERROR:",
             emailError
