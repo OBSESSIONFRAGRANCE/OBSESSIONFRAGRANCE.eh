@@ -1,0 +1,645 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Obsession Fragrance — Not A Perfume . An Obsession</title>
+  <meta name="description" content="Obsession Fragrance. Not A Perfume . An Obsession. Discover our collection of high-performance fragrances.">
+
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    :root {
+      --black: #080808;
+      --soft-black: #101010;
+      --cream: #f3eee7;
+      --muted: #aaa39b;
+      --gold: #c9a46a;
+      --line: rgba(255,255,255,.12);
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      background: var(--black);
+      color: var(--cream);
+      font-family: Arial, Helvetica, sans-serif;
+      line-height: 1.5;
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    button {
+      font: inherit;
+    }
+
+    /* NAVBAR */
+
+    header {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      z-index: 100;
+      background: rgba(8,8,8,.82);
+      backdrop-filter: blur(16px);
+      border-bottom: 1px solid var(--line);
+    }
+
+    nav {
+      max-width: 1250px;
+      height: 76px;
+      margin: auto;
+      padding: 0 25px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    .brand {
+      font-size: 18px;
+      font-weight: 700;
+      letter-spacing: 4px;
+    }
+
+    .brand span {
+      color: var(--gold);
+    }
+
+    .nav-links {
+      display: flex;
+      gap: 35px;
+      font-size: 12px;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+    }
+
+    .nav-links a {
+      color: #ddd;
+      transition: .3s;
+    }
+
+    .nav-links a:hover {
+      color: var(--gold);
+    }
+
+    .cart {
+      border: 1px solid var(--line);
+      padding: 10px 15px;
+      border-radius: 30px;
+      cursor: pointer;
+      font-size: 12px;
+    }
+
+    /* HERO */
+
+    .hero {
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      padding: 120px 25px 70px;
+      position: relative;
+      overflow: hidden;
+      background:
+        radial-gradient(circle at 50% 45%, rgba(128,92,45,.18), transparent 35%),
+        linear-gradient(180deg, #080808 0%, #111 100%);
+    }
+
+    .hero::before {
+      content: "";
+      position: absolute;
+      width: 600px;
+      height: 600px;
+      border: 1px solid rgba(201,164,106,.12);
+      border-radius: 50%;
+    }
+
+    .hero-content {
+      position: relative;
+      z-index: 2;
+      max-width: 900px;
+    }
+
+    .eyebrow {
+      color: var(--gold);
+      letter-spacing: 6px;
+      text-transform: uppercase;
+      font-size: 11px;
+      margin-bottom: 28px;
+    }
+
+    .hero h1 {
+      font-size: clamp(52px, 10vw, 125px);
+      line-height: .9;
+      letter-spacing: -5px;
+      text-transform: uppercase;
+      margin-bottom: 30px;
+    }
+
+    .hero h1 span {
+      display: block;
+      font-weight: 300;
+      color: #d8d1c8;
+    }
+
+    .hero p {
+      max-width: 550px;
+      margin: auto;
+      color: var(--muted);
+      font-size: 16px;
+    }
+
+    .cta {
+      display: inline-block;
+      margin-top: 38px;
+      padding: 16px 32px;
+      border: 1px solid var(--gold);
+      color: var(--cream);
+      text-transform: uppercase;
+      letter-spacing: 3px;
+      font-size: 11px;
+      transition: .3s;
+    }
+
+    .cta:hover {
+      background: var(--gold);
+      color: #080808;
+    }
+
+    /* STORY */
+
+    .story {
+      padding: 110px 25px;
+      max-width: 1050px;
+      margin: auto;
+      text-align: center;
+    }
+
+    .section-label {
+      color: var(--gold);
+      text-transform: uppercase;
+      letter-spacing: 4px;
+      font-size: 10px;
+      margin-bottom: 20px;
+    }
+
+    .story h2 {
+      font-size: clamp(35px, 5vw, 65px);
+      line-height: 1;
+      margin-bottom: 30px;
+    }
+
+    .story p {
+      color: var(--muted);
+      max-width: 720px;
+      margin: auto;
+      font-size: 16px;
+    }
+
+    /* SHOP */
+
+    .shop {
+      padding: 90px 25px 120px;
+      max-width: 1250px;
+      margin: auto;
+    }
+
+    .shop-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: end;
+      margin-bottom: 45px;
+    }
+
+    .shop-header h2 {
+      font-size: clamp(35px, 5vw, 60px);
+      line-height: .9;
+    }
+
+    .shop-header p {
+      color: var(--muted);
+      font-size: 13px;
+    }
+
+    .products {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 22px;
+    }
+
+    .product {
+      background: var(--soft-black);
+      border: 1px solid var(--line);
+      min-height: 430px;
+      position: relative;
+      overflow: hidden;
+      transition: .4s;
+    }
+
+    .product:hover {
+      transform: translateY(-6px);
+      border-color: rgba(201,164,106,.45);
+    }
+
+    .product-image {
+      height: 270px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background:
+        radial-gradient(circle, rgba(201,164,106,.16), transparent 55%);
+      color: #777;
+      text-transform: uppercase;
+      letter-spacing: 3px;
+      font-size: 10px;
+    }
+
+    .bottle-placeholder {
+      width: 105px;
+      height: 185px;
+      border: 1px solid rgba(255,255,255,.25);
+      border-radius: 8px 8px 15px 15px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      writing-mode: vertical-rl;
+      font-size: 9px;
+      letter-spacing: 3px;
+      color: #cfc8be;
+      box-shadow: 0 20px 60px rgba(0,0,0,.7);
+    }
+
+    .product-info {
+      padding: 25px;
+    }
+
+    .product-info .gender {
+      font-size: 9px;
+      color: var(--gold);
+      letter-spacing: 3px;
+      text-transform: uppercase;
+    }
+
+    .product-info h3 {
+      margin: 8px 0;
+      font-size: 24px;
+      letter-spacing: 2px;
+    }
+
+    .product-info .original {
+      color: #777;
+      font-size: 11px;
+    }
+
+    .product-bottom {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin-top: 20px;
+    }
+
+    .price {
+      font-size: 17px;
+    }
+
+    .add {
+      background: transparent;
+      color: var(--cream);
+      border: 1px solid var(--line);
+      padding: 9px 14px;
+      cursor: pointer;
+      font-size: 10px;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+    }
+
+    .add:hover {
+      border-color: var(--gold);
+      color: var(--gold);
+    }
+
+    /* FOOTER */
+
+    footer {
+      border-top: 1px solid var(--line);
+      padding: 55px 25px;
+      text-align: center;
+      color: #777;
+    }
+
+    footer strong {
+      display: block;
+      color: var(--cream);
+      letter-spacing: 4px;
+      margin-bottom: 10px;
+    }
+
+    footer p {
+      font-size: 11px;
+      letter-spacing: 1px;
+    }
+
+    /* MOBILE */
+
+    @media (max-width: 700px) {
+      .nav-links {
+        display: none;
+      }
+
+      nav {
+        height: 68px;
+      }
+
+      .hero h1 {
+        letter-spacing: -3px;
+      }
+
+      .products {
+        grid-template-columns: 1fr;
+      }
+
+      .product {
+        min-height: 420px;
+      }
+
+      .shop-header {
+        display: block;
+      }
+
+      .shop-header p {
+        margin-top: 15px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+<header>
+  <nav>
+    <a href="#" class="brand">OBSESSION<span>.</span></a>
+
+    <div class="nav-links">
+      <a href="#shop">Shop</a>
+      <a href="#story">Our Story</a>
+      <a href="#contact">Contact</a>
+    </div>
+
+    <div class="cart">
+      CART <span id="cartCount">0</span>
+    </div>
+  </nav>
+</header>
+
+<main>
+
+  <section class="hero">
+    <div class="hero-content">
+      <div class="eyebrow">Obsession Fragrance</div>
+
+      <h1>
+        Obsession
+        <span>Has A Scent.</span>
+      </h1>
+
+      <p>
+        Not A Perfume . An Obsession
+      </p>
+
+      <a href="#shop" class="cta">Enter The Obsession</a>
+    </div>
+  </section>
+
+  <section class="story" id="story">
+    <div class="section-label">The Beginning</div>
+
+    <h2>We Didn't Want<br>Another Perfume.</h2>
+
+    <p>
+      Two fragrance-obsessed minds who were never satisfied with ordinary
+      performance decided to create something for themselves — and share
+      the obsession with everyone who understands that fragrance is more
+      than a scent.
+    </p>
+  </section>
+
+  <section class="shop" id="shop">
+
+    <div class="shop-header">
+      <div>
+        <div class="section-label">The Collection</div>
+        <h2>Get<br>Obsessed.</h2>
+      </div>
+
+      <p>50 ML · HIGH PERFORMANCE · UNISEX &amp; SIGNATURE SCENTS</p>
+    </div>
+
+    <div class="products">
+
+      <article class="product">
+        <div class="product-image">
+          <div class="bottle-placeholder">LOSTED</div>
+        </div>
+
+        <div class="product-info">
+          <div class="gender">Unisex</div>
+          <h3>LOSTED</h3>
+          <div class="original">Inspired by Tom Ford Lost Cherry</div>
+
+          <div class="product-bottom">
+            <div class="price">500 EGP</div>
+            <button class="add" onclick="addToCart('LOSTED')">Add</button>
+          </div>
+        </div>
+      </article>
+
+      <article class="product">
+        <div class="product-image">
+          <div class="bottle-placeholder">PARADISE</div>
+        </div>
+
+        <div class="product-info">
+          <div class="gender">Female</div>
+          <h3>PARADISE</h3>
+          <div class="original">Inspired by Prada Paradoxe EDP</div>
+
+          <div class="product-bottom">
+            <div class="price">500 EGP</div>
+            <button class="add" onclick="addToCart('PARADISE')">Add</button>
+          </div>
+        </div>
+      </article>
+
+      <article class="product">
+        <div class="product-image">
+          <div class="bottle-placeholder">HOT CIGAR</div>
+        </div>
+
+        <div class="product-info">
+          <div class="gender">Male</div>
+          <h3>HOT CIGAR</h3>
+          <div class="original">Inspired by Kilian Smoking Hot</div>
+
+          <div class="product-bottom">
+            <div class="price">500 EGP</div>
+            <button class="add" onclick="addToCart('HOT CIGAR')">Add</button>
+          </div>
+        </div>
+      </article>
+
+      <article class="product">
+        <div class="product-image">
+          <div class="bottle-placeholder">HONEY NOIR</div>
+        </div>
+
+        <div class="product-info">
+          <div class="gender">Male</div>
+          <h3>HONEY NOIR</h3>
+          <div class="original">Inspired by Xerjoff Naxos</div>
+
+          <div class="product-bottom">
+            <div class="price">500 EGP</div>
+            <button class="add" onclick="addToCart('HONEY NOIR')">Add</button>
+          </div>
+        </div>
+      </article>
+
+      <article class="product">
+        <div class="product-image">
+          <div class="bottle-placeholder">FEMME FATAL</div>
+        </div>
+
+        <div class="product-info">
+          <div class="gender">Female</div>
+          <h3>FEMME FATAL</h3>
+          <div class="original">Inspired by Carolina Herrera Good Girl</div>
+
+          <div class="product-bottom">
+            <div class="price">500 EGP</div>
+            <button class="add" onclick="addToCart('FEMME FATAL')">Add</button>
+          </div>
+        </div>
+      </article>
+
+      <article class="product">
+        <div class="product-image">
+          <div class="bottle-placeholder">NIGHT PEAR</div>
+        </div>
+
+        <div class="product-info">
+          <div class="gender">Male</div>
+          <h3>NIGHT PEAR</h3>
+          <div class="original">Inspired by JPG Ultra Male</div>
+
+          <div class="product-bottom">
+            <div class="price">500 EGP</div>
+            <button class="add" onclick="addToCart('NIGHT PEAR')">Add</button>
+          </div>
+        </div>
+      </article>
+
+      <article class="product">
+        <div class="product-image">
+          <div class="bottle-placeholder">ODESSEY</div>
+        </div>
+
+        <div class="product-info">
+          <div class="gender">Male</div>
+          <h3>ODESSEY</h3>
+          <div class="original">Inspired by Xerjoff Alexandria II</div>
+
+          <div class="product-bottom">
+            <div class="price">500 EGP</div>
+            <button class="add" onclick="addToCart('ODESSEY')">Add</button>
+          </div>
+        </div>
+      </article>
+
+      <article class="product">
+        <div class="product-image">
+          <div class="bottle-placeholder">DIVA</div>
+        </div>
+
+        <div class="product-info">
+          <div class="gender">Unisex</div>
+          <h3>DIVA</h3>
+          <div class="original">Inspired by Amouage Guidance</div>
+
+          <div class="product-bottom">
+            <div class="price">500 EGP</div>
+            <button class="add" onclick="addToCart('DIVA')">Add</button>
+          </div>
+        </div>
+      </article>
+
+      <article class="product">
+        <div class="product-image">
+          <div class="bottle-placeholder">SUPREMACY</div>
+        </div>
+
+        <div class="product-info">
+          <div class="gender">Male</div>
+          <h3>SUPREMACY</h3>
+          <div class="original">Inspired by Parfums de Marly Althaïr</div>
+
+          <div class="product-bottom">
+            <div class="price">500 EGP</div>
+            <button class="add" onclick="addToCart('SUPREMACY')">Add</button>
+          </div>
+        </div>
+      </article>
+
+      <article class="product">
+        <div class="product-image">
+          <div class="bottle-placeholder">ROSE SKIN</div>
+        </div>
+
+        <div class="product-info">
+          <div class="gender">Female</div>
+          <h3>ROSE SKIN</h3>
+          <div class="original">Inspired by JPG La Belle</div>
+
+          <div class="product-bottom">
+            <div class="price">500 EGP</div>
+            <button class="add" onclick="addToCart('ROSE SKIN')">Add</button>
+          </div>
+        </div>
+      </article>
+
+    </div>
+  </section>
+
+</main>
+
+<footer id="contact">
+  <strong>OBSESSION FRAGRANCE</strong>
+  <p>Not A Perfume . An Obsession</p>
+  <br>
+  <p>OBSESSION2027@gmail.com</p>
+</footer>
+
+<script>
+  let cartCount = 0;
+
+  function addToCart(product) {
+    cartCount++;
+    document.getElementById("cartCount").textContent = cartCount;
+
+    alert(product + " added to your obsession.");
+  }
+</script>
+
+</body>
+</html>
