@@ -34,6 +34,9 @@
       width: min(1180px, 92%);
       margin: auto;
     }
+    /* =========================
+       HEADER
+    ========================= */
     header {
       position: sticky;
       top: 0;
@@ -74,6 +77,9 @@
       background: #f5f1eb;
       color: #111;
     }
+    /* =========================
+       HERO
+    ========================= */
     .hero {
       min-height: 72vh;
       display: grid;
@@ -81,8 +87,16 @@
       text-align: center;
       padding: 80px 20px;
       background:
-        radial-gradient(circle at center, rgba(116,82,65,.18), transparent 42%),
-        linear-gradient(180deg, #111 0%, #0a0a0a 100%);
+        radial-gradient(
+          circle at center,
+          rgba(116,82,65,.18),
+          transparent 42%
+        ),
+        linear-gradient(
+          180deg,
+          #111 0%,
+          #0a0a0a 100%
+        );
     }
     .eyebrow {
       color: #a99d94;
@@ -116,7 +130,9 @@
       background: #f5f1eb;
       color: #111;
     }
-    /* FREE SHIPPING */
+    /* =========================
+       SHIPPING
+    ========================= */
     .shipping-banner {
       width: 100%;
       text-align: center;
@@ -133,6 +149,9 @@
     .shipping-banner span {
       color: #b9aaa0;
     }
+    /* =========================
+       SECTIONS
+    ========================= */
     section {
       padding: 90px 0;
     }
@@ -150,6 +169,9 @@
       margin-top: 12px;
       letter-spacing: -2px;
     }
+    /* =========================
+       PRODUCTS
+    ========================= */
     .products {
       display: grid;
       grid-template-columns: repeat(3, 1fr);
@@ -159,7 +181,9 @@
       border: 1px solid rgba(255,255,255,.08);
       background: #101010;
       overflow: hidden;
-      transition: transform .25s, border-color .25s;
+      transition:
+        transform .25s,
+        border-color .25s;
     }
     .product-card:hover {
       transform: translateY(-5px);
@@ -170,7 +194,11 @@
       display: grid;
       place-items: center;
       background:
-        radial-gradient(circle, rgba(115,83,68,.18), transparent 55%),
+        radial-gradient(
+          circle,
+          rgba(115,83,68,.18),
+          transparent 55%
+        ),
         #0d0d0d;
       color: #625952;
       font-size: 11px;
@@ -230,6 +258,9 @@
     .add-btn:hover {
       opacity: .85;
     }
+    /* =========================
+       ABOUT
+    ========================= */
     .about {
       background: #0f0f0f;
       border-top: 1px solid rgba(255,255,255,.06);
@@ -241,12 +272,18 @@
       font-size: 18px;
       line-height: 1.9;
     }
+    /* =========================
+       FOOTER
+    ========================= */
     footer {
       padding: 50px 0;
       text-align: center;
       color: #777;
       font-size: 12px;
     }
+    /* =========================
+       OVERLAYS
+    ========================= */
     .overlay {
       position: fixed;
       inset: 0;
@@ -260,6 +297,9 @@
     .overlay.active {
       display: block;
     }
+    /* =========================
+       PRODUCT MODAL
+    ========================= */
     .modal {
       width: min(900px, 100%);
       margin: 30px auto;
@@ -289,7 +329,11 @@
       display: grid;
       place-items: center;
       background:
-        radial-gradient(circle, rgba(115,83,68,.2), transparent 55%),
+        radial-gradient(
+          circle,
+          rgba(115,83,68,.2),
+          transparent 55%
+        ),
         #0c0c0c;
     }
     .details-photo img {
@@ -367,6 +411,9 @@
       font-weight: 700;
       letter-spacing: 1px;
     }
+    /* =========================
+       CART
+    ========================= */
     .cart-modal {
       width: min(650px, 100%);
       margin: 30px auto;
@@ -439,6 +486,9 @@
       text-align: center;
       padding: 40px 0;
     }
+    /* =========================
+       CHECKOUT
+    ========================= */
     .checkout-modal {
       width: min(800px, 100%);
       margin: 30px auto;
@@ -594,6 +644,9 @@
       color: #ffb5b5;
       background: rgba(100,20,20,.15);
     }
+    /* =========================
+       SUCCESS
+    ========================= */
     .success-box {
       text-align: center;
       padding: 50px 20px;
@@ -614,6 +667,9 @@
       letter-spacing: 1px;
       word-break: break-all;
     }
+    /* =========================
+       RESPONSIVE
+    ========================= */
     @media (max-width: 850px) {
       .products {
         grid-template-columns: repeat(2, 1fr);
@@ -663,183 +719,322 @@
   </style>
 </head>
 <body>
-<header>
-  <div class="container nav">
-    <a href="#" class="logo">
-      OBSESSION
-      <span>FRAGRANCE</span>
-    </a>
-    <button class="cart-btn" onclick="openCart()">
-      BAG <span id="cartCount">0</span>
-    </button>
-  </div>
-</header>
-<main>
-  <!-- HERO -->
-  <section class="hero">
-    <div>
-      <div class="eyebrow">
-        Obsession Fragrance
-      </div>
-      <h1>
-        Obsession<br>
-        Has A Scent.
-      </h1>
-      <p>
-        Not A Perfume. An Obsession.
-        Discover fragrances created for those who refuse to smell ordinary.
-      </p>
-      <a href="#collection" class="hero-btn">
-        ENTER THE OBSESSION
+  <!-- =========================
+       HEADER
+  ========================= -->
+  <header>
+    <div class="container nav">
+      <a href="#" class="logo">
+        OBSESSION
+        <span>FRAGRANCE</span>
       </a>
+      <button
+        class="cart-btn"
+        onclick="openCart()"
+      >
+        BAG <span id="cartCount">0</span>
+      </button>
     </div>
-  </section>
-  <!-- FREE SHIPPING -->
-  <div class="shipping-banner">
-    FREE SHIPPING <span>ABOVE 2000 EGP</span>
-  </div>
-  <!-- COLLECTION -->
-  <section id="collection">
-    <div class="container">
-      <div class="section-title">
-        <small>The Collection</small>
-        <h2>Choose Your Obsession.</h2>
+  </header>
+  <main>
+    <!-- =========================
+         HERO
+    ========================= -->
+    <section class="hero">
+      <div>
+        <div class="eyebrow">
+          Obsession Fragrance
+        </div>
+        <h1>
+          Obsession<br>
+          Has A Scent.
+        </h1>
+        <p>
+          Not A Perfume. An Obsession.
+          Discover fragrances created for those who refuse to smell ordinary.
+        </p>
+        <a
+          href="#collection"
+          class="hero-btn"
+        >
+          ENTER THE OBSESSION
+        </a>
       </div>
-      <div id="products" class="products">
-        <div class="empty">
-          Loading the collection...
+    </section>
+    <!-- =========================
+         FREE SHIPPING
+    ========================= -->
+    <div class="shipping-banner">
+      FREE SHIPPING
+      <span>ABOVE 2000 EGP</span>
+    </div>
+    <!-- =========================
+         COLLECTION
+    ========================= -->
+    <section id="collection">
+      <div class="container">
+        <div class="section-title">
+          <small>
+            The Collection
+          </small>
+          <h2>
+            Choose Your Obsession.
+          </h2>
+        </div>
+        <div
+          id="products"
+          class="products"
+        >
+          <div class="empty">
+            Loading the collection...
+          </div>
         </div>
       </div>
-    </div>
-  </section>
-  <!-- ABOUT -->
-  <section class="about">
-    <div class="container">
-      <div class="section-title">
-        <small>Our Story</small>
-        <h2>Made From Obsession.</h2>
+    </section>
+    <!-- =========================
+         ABOUT
+    ========================= -->
+    <section class="about">
+      <div class="container">
+        <div class="section-title">
+          <small>
+            Our Story
+          </small>
+          <h2>
+            Made From Obsession.
+          </h2>
+        </div>
+        <p class="about-text">
+          We were obsessed with fragrance long before Obsession Fragrance existed.
+          We wanted more — more character, more presence, more performance.
+          So we started creating fragrances for ourselves.
+          Then we decided to share that obsession with you.
+        </p>
       </div>
-      <p class="about-text">
-        We were obsessed with fragrance long before Obsession Fragrance existed.
-        We wanted more — more character, more presence, more performance.
-        So we started creating fragrances for ourselves.
-        Then we decided to share that obsession with you.
-      </p>
+    </section>
+  </main>
+  <!-- =========================
+       FOOTER
+  ========================= -->
+  <footer>
+    <div>
+      OBSESSION FRAGRANCE
     </div>
-  </section>
-</main>
-<footer>
-  <div>OBSESSION FRAGRANCE</div>
-  <div style="margin-top:10px;">
-    Not A Perfume . An Obsession
-  </div>
-  <div style="margin-top:15px;">
-    FREE SHIPPING ABOVE 2000 EGP
-  </div>
-  <div style="margin-top:15px;">
-    OBSESSION2027@gmail.com
-  </div>
-</footer>
-<!-- PRODUCT DETAILS -->
-<div id="productOverlay" class="overlay">
-  <div class="modal">
-    <button class="close" onclick="closeProduct()">×</button>
-    <div id="productDetails"></div>
-  </div>
-</div>
-<!-- CART -->
-<div id="cartOverlay" class="overlay">
-  <div class="cart-modal">
-    <button class="close" onclick="closeCart()">×</button>
-    <h2>Your Bag</h2>
-    <div class="cart-shipping-message">
+    <div style="margin-top:10px;">
+      Not A Perfume . An Obsession
+    </div>
+    <div style="margin-top:15px;">
       FREE SHIPPING ABOVE 2000 EGP
     </div>
-    <div id="cartItems"></div>
-    <div id="cartFooter"></div>
+    <div style="margin-top:15px;">
+      OBSESSION2027@gmail.com
+    </div>
+  </footer>
+  <!-- =========================
+       PRODUCT DETAILS
+  ========================= -->
+  <div
+    id="productOverlay"
+    class="overlay"
+  >
+    <div class="modal">
+      <button
+        class="close"
+        onclick="closeProduct()"
+      >
+        ×
+      </button>
+      <div id="productDetails"></div>
+    </div>
   </div>
-</div>
-<!-- CHECKOUT -->
-<div id="checkoutOverlay" class="overlay">
-  <div class="checkout-modal">
-    <button class="close" onclick="closeCheckout()">×</button>
-    <div id="checkoutContent"></div>
+  <!-- =========================
+       CART
+  ========================= -->
+  <div
+    id="cartOverlay"
+    class="overlay"
+  >
+    <div class="cart-modal">
+      <button
+        class="close"
+        onclick="closeCart()"
+      >
+        ×
+      </button>
+      <h2>
+        Your Bag
+      </h2>
+      <div class="cart-shipping-message">
+        FREE SHIPPING ABOVE 2000 EGP
+      </div>
+      <div id="cartItems"></div>
+      <div id="cartFooter"></div>
+    </div>
   </div>
-</div>
-<script>
-// =====================================================
-// SUPABASE
-// =====================================================
-const SUPABASE_URL =
-  "https://rhgrrpmrcydqtysqwqzu.supabase.co";
-const SUPABASE_KEY =
-  "sb_publishable_8hHu-y_TGbDR2pmSZnyNgQ_bJ4NgOIF";
-const supabaseClient =
-  window.supabase.createClient(
-    SUPABASE_URL,
-    SUPABASE_KEY
-  );
-// =====================================================
-// GLOBAL DATA
-// =====================================================
-let products = [];
-let cart =
-  JSON.parse(
-    localStorage.getItem("obsession_cart") || "[]"
-  );
-// =====================================================
-// LOAD PRODUCTS
-// =====================================================
-async function loadProducts() {
-  const container =
-    document.getElementById("products");
-  try {
-    const {
-      data,
-      error
-    } =
-      await supabaseClient
-        .from("products")
-        .select("*")
-        .eq("active", true)
-        .order("created_at", {
-          ascending: true
-        });
-    if (error) {
-      throw error;
+  <!-- =========================
+       CHECKOUT
+  ========================= -->
+  <div
+    id="checkoutOverlay"
+    class="overlay"
+  >
+    <div class="checkout-modal">
+      <button
+        class="close"
+        onclick="closeCheckout()"
+      >
+        ×
+      </button>
+      <div id="checkoutContent"></div>
+    </div>
+  </div>
+  <script>
+    // =====================================================
+    // SUPABASE
+    // =====================================================
+    const SUPABASE_URL =
+      "https://rhgrrpmrcydqtysqwqzu.supabase.co";
+    const SUPABASE_KEY =
+      "sb_publishable_8hHu-y_TGbDR2pmSZnyNgQ_bJ4NgOIF";
+    const supabaseClient =
+      window.supabase.createClient(
+        SUPABASE_URL,
+        SUPABASE_KEY
+      );
+    // =====================================================
+    // GLOBAL DATA
+    // =====================================================
+    let products = [];
+    let cart =
+      JSON.parse(
+        localStorage.getItem("obsession_cart") || "[]"
+      );
+    // =====================================================
+    // LOAD PRODUCTS
+    // =====================================================
+    async function loadProducts() {
+      const container =
+        document.getElementById("products");
+      try {
+        const {
+          data,
+          error
+        } =
+          await supabaseClient
+            .from("products")
+            .select("*")
+            .eq("active", true)
+            .order("created_at", {
+              ascending: true
+            });
+        if (error) {
+          throw error;
+        }
+        products = data || [];
+        renderProducts();
+        updateCartCount();
+      } catch (error) {
+        console.error(
+          "Supabase error:",
+          error
+        );
+        container.innerHTML = `
+          <div class="empty">
+            Unable to load the collection.
+          </div>
+        `;
+      }
     }
-    products =
-      data || [];
-    renderProducts();
-    updateCartCount();
-  } catch (error) {
-    console.error(
-      "Supabase error:",
-      error
-    );
-    container.innerHTML = `
-      <div class="empty">
-        Unable to load the collection.
-      </div>
-    `;
-  }
-}
-// =====================================================
-// RENDER PRODUCTS
-// =====================================================
-function renderProducts() {
-  const container =
-    document.getElementById("products");
-  if (!products.length) {
-    container.innerHTML = `
-      <div class="empty">
-        No fragrances available.
-      </div>
-    `;
-    return;
-  }
-  container.innerHTML =
-    products.map(product => {
+    // =====================================================
+    // RENDER PRODUCTS
+    // =====================================================
+    function renderProducts() {
+      const container =
+        document.getElementById("products");
+      if (!products.length) {
+        container.innerHTML = `
+          <div class="empty">
+            No fragrances available.
+          </div>
+        `;
+        return;
+      }
+      container.innerHTML =
+        products.map(product => {
+          const image =
+            product.image_url
+              ? `
+                <img
+                  src="${product.image_url}"
+                  alt="${escapeHtml(product.name)}"
+                >
+              `
+              : `
+                <span>
+                  OBSESSION
+                </span>
+              `;
+          return `
+            <article class="product-card">
+              <div
+                class="product-image"
+                onclick="openProduct(${product.id})"
+                style="cursor:pointer;"
+              >
+                ${image}
+              </div>
+              <div class="product-info">
+                <div class="gender">
+                  ${escapeHtml(
+                    product.gender || "Unisex"
+                  )}
+                </div>
+                <div
+                  class="product-name"
+                  onclick="openProduct(${product.id})"
+                  style="cursor:pointer;"
+                >
+                  ${escapeHtml(product.name)}
+                </div>
+                <div class="original">
+                  Inspired by
+                  ${escapeHtml(
+                    product.original_name || ""
+                  )}
+                </div>
+                <div class="price">
+                  ${Number(product.price).toLocaleString()}
+                  EGP
+                </div>
+                <div class="card-actions">
+                  <button
+                    class="details-btn"
+                    onclick="openProduct(${product.id})"
+                  >
+                    VIEW
+                  </button>
+                  <button
+                    class="add-btn"
+                    onclick="addToCart(${product.id}, 1)"
+                  >
+                    ADD TO CART
+                  </button>
+                </div>
+              </div>
+            </article>
+          `;
+        }).join("");
+    }
+    // =====================================================
+    // PRODUCT DETAILS
+    // =====================================================
+    function openProduct(id) {
+      const product =
+        products.find(
+          p =>
+            Number(p.id) === Number(id)
+        );
+      if (!product) return;
       const image =
         product.image_url
           ? `
@@ -849,980 +1044,949 @@ function renderProducts() {
             >
           `
           : `
-            <span>OBSESSION</span>
+            <span>
+              OBSESSION
+            </span>
           `;
-      return `
-        <article class="product-card">
-          <div
-            class="product-image"
-            onclick="openProduct(${product.id})"
-            style="cursor:pointer;"
-          >
+      document.getElementById(
+        "productDetails"
+      ).innerHTML = `
+        <div class="details-grid">
+          <div class="details-photo">
             ${image}
           </div>
-          <div class="product-info">
+          <div class="details-content">
             <div class="gender">
               ${escapeHtml(
                 product.gender || "Unisex"
               )}
             </div>
-            <div
-              class="product-name"
-              onclick="openProduct(${product.id})"
-              style="cursor:pointer;"
-            >
+            <h2>
               ${escapeHtml(product.name)}
-            </div>
-            <div class="original">
+            </h2>
+            <div class="details-original">
               Inspired by
               ${escapeHtml(
                 product.original_name || ""
               )}
             </div>
-            <div class="price">
+            <p class="details-description">
+              ${escapeHtml(
+                product.description ||
+                "A signature Obsession fragrance created for unforgettable presence."
+              )}
+            </p>
+            <div class="stats">
+              <div class="stat">
+                <span>
+                  Volume
+                </span>
+                <strong>
+                  50 ML
+                </strong>
+              </div>
+              <div class="stat">
+                <span>
+                  Intensity
+                </span>
+                <strong>
+                  High
+                </strong>
+              </div>
+              <div class="stat">
+                <span>
+                  Projection
+                </span>
+                <strong>
+                  Strong
+                </strong>
+              </div>
+              <div class="stat">
+                <span>
+                  Longevity
+                </span>
+                <strong>
+                  Long Lasting
+                </strong>
+              </div>
+            </div>
+            <div class="details-price">
               ${Number(product.price).toLocaleString()}
               EGP
             </div>
-            <div class="card-actions">
+            <div class="quantity">
               <button
-                class="details-btn"
-                onclick="openProduct(${product.id})"
+                onclick="changeDetailsQuantity(-1)"
               >
-                VIEW
+                −
+              </button>
+              <span id="detailsQuantity">
+                1
+              </span>
+              <button
+                onclick="changeDetailsQuantity(1)"
+              >
+                +
+              </button>
+            </div>
+            <button
+              class="big-add"
+              onclick="addDetailsProduct(${product.id})"
+            >
+              ADD TO CART
+            </button>
+          </div>
+        </div>
+      `;
+      window.currentDetailsProduct =
+        product;
+      window.currentDetailsQuantity =
+        1;
+      document
+        .getElementById("productOverlay")
+        .classList.add("active");
+      document.body.style.overflow =
+        "hidden";
+    }
+    function changeDetailsQuantity(amount) {
+      window.currentDetailsQuantity =
+        Math.max(
+          1,
+          (window.currentDetailsQuantity || 1) +
+          amount
+        );
+      const element =
+        document.getElementById(
+          "detailsQuantity"
+        );
+      if (element) {
+        element.textContent =
+          window.currentDetailsQuantity;
+      }
+    }
+    function addDetailsProduct(id) {
+      const quantity =
+        window.currentDetailsQuantity || 1;
+      addToCart(
+        id,
+        quantity
+      );
+      closeProduct();
+      openCart();
+    }
+    function closeProduct() {
+      document
+        .getElementById("productOverlay")
+        .classList.remove("active");
+      document.body.style.overflow =
+        "";
+    }
+    // =====================================================
+    // CART
+    // =====================================================
+    function addToCart(
+      id,
+      quantity = 1
+    ) {
+      const product =
+        products.find(
+          p =>
+            Number(p.id) === Number(id)
+        );
+      if (!product) return;
+      const existing =
+        cart.find(
+          item =>
+            Number(item.id) === Number(id)
+        );
+      if (existing) {
+        existing.quantity += quantity;
+      } else {
+        cart.push({
+          id: product.id,
+          name: product.name,
+          price: Number(product.price),
+          quantity: quantity,
+          image_url: product.image_url || ""
+        });
+      }
+      saveCart();
+      updateCartCount();
+      showAddedMessage(
+        product.name
+      );
+    }
+    function removeFromCart(id) {
+      cart =
+        cart.filter(
+          item =>
+            Number(item.id) !== Number(id)
+        );
+      saveCart();
+      renderCart();
+      updateCartCount();
+    }
+    function changeCartQuantity(
+      id,
+      amount
+    ) {
+      const item =
+        cart.find(
+          item =>
+            Number(item.id) === Number(id)
+        );
+      if (!item) return;
+      item.quantity += amount;
+      if (item.quantity <= 0) {
+        removeFromCart(id);
+        return;
+      }
+      saveCart();
+      renderCart();
+      updateCartCount();
+    }
+    function saveCart() {
+      localStorage.setItem(
+        "obsession_cart",
+        JSON.stringify(cart)
+      );
+    }
+    function updateCartCount() {
+      const count =
+        cart.reduce(
+          (total, item) =>
+            total + Number(item.quantity),
+          0
+        );
+      const cartCount =
+        document.getElementById(
+          "cartCount"
+        );
+      if (cartCount) {
+        cartCount.textContent =
+          count;
+      }
+    }
+    function openCart() {
+      renderCart();
+      document
+        .getElementById("cartOverlay")
+        .classList.add("active");
+      document.body.style.overflow =
+        "hidden";
+    }
+    function closeCart() {
+      document
+        .getElementById("cartOverlay")
+        .classList.remove("active");
+      document.body.style.overflow =
+        "";
+    }
+    function renderCart() {
+      const container =
+        document.getElementById(
+          "cartItems"
+        );
+      const footer =
+        document.getElementById(
+          "cartFooter"
+        );
+      if (!cart.length) {
+        container.innerHTML = `
+          <div class="empty">
+            Your bag is empty.
+          </div>
+        `;
+        footer.innerHTML = "";
+        return;
+      }
+      container.innerHTML =
+        cart.map(item => `
+          <div class="cart-item">
+            <div>
+              <div class="cart-item-name">
+                ${escapeHtml(item.name)}
+              </div>
+              <div class="cart-item-price">
+                ${Number(item.price).toLocaleString()}
+                EGP
+              </div>
+            </div>
+            <div class="cart-controls">
+              <button
+                onclick="changeCartQuantity(${item.id}, -1)"
+              >
+                −
+              </button>
+              <span>
+                ${item.quantity}
+              </span>
+              <button
+                onclick="changeCartQuantity(${item.id}, 1)"
+              >
+                +
               </button>
               <button
-                class="add-btn"
-                onclick="addToCart(${product.id}, 1)"
+                onclick="removeFromCart(${item.id})"
               >
-                ADD TO CART
+                ×
               </button>
             </div>
           </div>
-        </article>
-      `;
-    }).join("");
-}
-// =====================================================
-// PRODUCT DETAILS
-// =====================================================
-function openProduct(id) {
-  const product =
-    products.find(
-      p =>
-        Number(p.id) ===
-        Number(id)
-    );
-  if (!product) return;
-  const image =
-    product.image_url
-      ? `
-        <img
-          src="${product.image_url}"
-          alt="${escapeHtml(product.name)}"
-        >
-      `
-      : `<span>OBSESSION</span>`;
-  document.getElementById(
-    "productDetails"
-  ).innerHTML = `
-    <div class="details-grid">
-      <div class="details-photo">
-        ${image}
-      </div>
-      <div class="details-content">
-        <div class="gender">
-          ${escapeHtml(
-            product.gender || "Unisex"
-          )}
-        </div>
-        <h2>
-          ${escapeHtml(product.name)}
-        </h2>
-        <div class="details-original">
-          Inspired by
-          ${escapeHtml(
-            product.original_name || ""
-          )}
-        </div>
-        <p class="details-description">
-          ${escapeHtml(
-            product.description ||
-            "A signature Obsession fragrance created for unforgettable presence."
-          )}
-        </p>
-        <div class="stats">
-          <div class="stat">
-            <span>Volume</span>
-            <strong>50 ML</strong>
-          </div>
-          <div class="stat">
-            <span>Intensity</span>
-            <strong>High</strong>
-          </div>
-          <div class="stat">
-            <span>Projection</span>
-            <strong>Strong</strong>
-          </div>
-          <div class="stat">
-            <span>Longevity</span>
-            <strong>Long Lasting</strong>
-          </div>
-        </div>
-        <div class="details-price">
-          ${Number(product.price).toLocaleString()}
-          EGP
-        </div>
-        <div class="quantity">
-          <button
-            onclick="changeDetailsQuantity(-1)"
-          >
-            −
-          </button>
-          <span id="detailsQuantity">
-            1
+        `).join("");
+      const subtotal =
+        cart.reduce(
+          (total, item) =>
+            total +
+            Number(item.price) *
+            Number(item.quantity),
+          0
+        );
+      const shipping =
+        subtotal >= 2000
+          ? 0
+          : 150;
+      const total =
+        subtotal + shipping;
+      footer.innerHTML = `
+        <div class="cart-total">
+          <span>
+            Subtotal
           </span>
-          <button
-            onclick="changeDetailsQuantity(1)"
-          >
-            +
-          </button>
+          <strong>
+            ${subtotal.toLocaleString()}
+            EGP
+          </strong>
+        </div>
+        <div
+          class="cart-total"
+          style="
+            border:0;
+            margin-top:0;
+            padding-top:12px;
+            font-size:15px;
+          "
+        >
+          <span>
+            Shipping
+          </span>
+          <strong>
+            ${
+              shipping === 0
+                ? "FREE"
+                : shipping.toLocaleString() + " EGP"
+            }
+          </strong>
+        </div>
+        <div class="cart-total">
+          <span>
+            Total
+          </span>
+          <strong>
+            ${total.toLocaleString()}
+            EGP
+          </strong>
         </div>
         <button
-          class="big-add"
-          onclick="addDetailsProduct(${product.id})"
+          class="checkout-btn"
+          onclick="startCheckout()"
         >
-          ADD TO CART
+          CHECKOUT
         </button>
-      </div>
-    </div>
-  `;
-  window.currentDetailsProduct =
-    product;
-  window.currentDetailsQuantity =
-    1;
-  document
-    .getElementById("productOverlay")
-    .classList.add("active");
-  document.body.style.overflow =
-    "hidden";
-}
-function changeDetailsQuantity(amount) {
-  window.currentDetailsQuantity =
-    Math.max(
-      1,
-      (window.currentDetailsQuantity || 1) +
-      amount
-    );
-  const element =
-    document.getElementById(
-      "detailsQuantity"
-    );
-  if (element) {
-    element.textContent =
-      window.currentDetailsQuantity;
-  }
-}
-function addDetailsProduct(id) {
-  const quantity =
-    window.currentDetailsQuantity || 1;
-  addToCart(
-    id,
-    quantity
-  );
-  closeProduct();
-  openCart();
-}
-function closeProduct() {
-  document
-    .getElementById("productOverlay")
-    .classList.remove("active");
-  document.body.style.overflow =
-    "";
-}
-// =====================================================
-// CART
-// =====================================================
-function addToCart(
-  id,
-  quantity = 1
-) {
-  const product =
-    products.find(
-      p =>
-        Number(p.id) ===
-        Number(id)
-    );
-  if (!product) return;
-  const existing =
-    cart.find(
-      item =>
-        Number(item.id) ===
-        Number(id)
-    );
-  if (existing) {
-    existing.quantity +=
-      quantity;
-  } else {
-    cart.push({
-      id: product.id,
-      name: product.name,
-      price:
-        Number(product.price),
-      quantity: quantity,
-      image_url:
-        product.image_url || ""
-    });
-  }
-  saveCart();
-  updateCartCount();
-  showAddedMessage(
-    product.name
-  );
-}
-function removeFromCart(id) {
-  cart =
-    cart.filter(
-      item =>
-        Number(item.id) !==
-        Number(id)
-    );
-  saveCart();
-  renderCart();
-  updateCartCount();
-}
-function changeCartQuantity(
-  id,
-  amount
-) {
-  const item =
-    cart.find(
-      item =>
-        Number(item.id) ===
-        Number(id)
-    );
-  if (!item) return;
-  item.quantity +=
-    amount;
-  if (item.quantity <= 0) {
-    removeFromCart(id);
-    return;
-  }
-  saveCart();
-  renderCart();
-  updateCartCount();
-}
-function saveCart() {
-  localStorage.setItem(
-    "obsession_cart",
-    JSON.stringify(cart)
-  );
-}
-function updateCartCount() {
-  const count =
-    cart.reduce(
-      (total, item) =>
-        total + item.quantity,
-      0
-    );
-  const cartCount =
-    document.getElementById(
-      "cartCount"
-    );
-  if (cartCount) {
-    cartCount.textContent =
-      count;
-  }
-}
-function openCart() {
-  renderCart();
-  document
-    .getElementById("cartOverlay")
-    .classList.add("active");
-  document.body.style.overflow =
-    "hidden";
-}
-function closeCart() {
-  document
-    .getElementById("cartOverlay")
-    .classList.remove("active");
-  document.body.style.overflow =
-    "";
-}
-function renderCart() {
-  const container =
-    document.getElementById(
-      "cartItems"
-    );
-  const footer =
-    document.getElementById(
-      "cartFooter"
-    );
-  if (!cart.length) {
-    container.innerHTML = `
-      <div class="empty">
-        Your bag is empty.
-      </div>
-    `;
-    footer.innerHTML = "";
-    return;
-  }
-  container.innerHTML =
-    cart.map(item => `
-      <div class="cart-item">
-        <div>
-          <div class="cart-item-name">
-            ${escapeHtml(item.name)}
+      `;
+    }
+    // =====================================================
+    // CHECKOUT
+    // =====================================================
+    function startCheckout() {
+      if (!cart.length) {
+        alert(
+          "Your bag is empty."
+        );
+        return;
+      }
+      closeCart();
+      const subtotal =
+        cart.reduce(
+          (total, item) =>
+            total +
+            Number(item.price) *
+            Number(item.quantity),
+          0
+        );
+      const shipping =
+        subtotal >= 2000
+          ? 0
+          : 150;
+      const total =
+        subtotal + shipping;
+      document.getElementById(
+        "checkoutContent"
+      ).innerHTML = `
+        <h2>
+          Checkout
+        </h2>
+        <div class="checkout-subtitle">
+          Complete your details to place your order.
+        </div>
+        <div class="checkout-shipping-message">
+          FREE SHIPPING ABOVE 2000 EGP
+        </div>
+        <div class="checkout-grid">
+          <div class="field">
+            <label>
+              Full Name *
+            </label>
+            <input
+              id="customerName"
+              type="text"
+              placeholder="Your full name"
+            >
           </div>
-          <div class="cart-item-price">
-            ${Number(item.price).toLocaleString()}
-            EGP
+          <div class="field">
+            <label>
+              Phone *
+            </label>
+            <input
+              id="customerPhone"
+              type="tel"
+              placeholder="01XXXXXXXXX"
+            >
+          </div>
+          <div class="field">
+            <label>
+              Email
+            </label>
+            <input
+              id="customerEmail"
+              type="email"
+              placeholder="your@email.com"
+            >
+          </div>
+          <div class="field">
+            <label>
+              Governorate *
+            </label>
+            <select id="customerGovernorate">
+              <option value="">
+                Select Governorate
+              </option>
+              <option>
+                Cairo
+              </option>
+              <option>
+                Giza
+              </option>
+              <option>
+                Alexandria
+              </option>
+              <option>
+                Qalyubia
+              </option>
+              <option>
+                Port Said
+              </option>
+              <option>
+                Suez
+              </option>
+              <option>
+                Damietta
+              </option>
+              <option>
+                Dakahlia
+              </option>
+              <option>
+                Sharqia
+              </option>
+              <option>
+                Gharbia
+              </option>
+              <option>
+                Monufia
+              </option>
+              <option>
+                Beheira
+              </option>
+              <option>
+                Kafr El Sheikh
+              </option>
+              <option>
+                Fayoum
+              </option>
+              <option>
+                Beni Suef
+              </option>
+              <option>
+                Minya
+              </option>
+              <option>
+                Asyut
+              </option>
+              <option>
+                Sohag
+              </option>
+              <option>
+                Qena
+              </option>
+              <option>
+                Luxor
+              </option>
+              <option>
+                Aswan
+              </option>
+              <option>
+                Red Sea
+              </option>
+              <option>
+                New Valley
+              </option>
+              <option>
+                North Sinai
+              </option>
+              <option>
+                South Sinai
+              </option>
+            </select>
+          </div>
+          <div class="field full">
+            <label>
+              Address *
+            </label>
+            <textarea
+              id="customerAddress"
+              placeholder="Full delivery address"
+            ></textarea>
           </div>
         </div>
-        <div class="cart-controls">
-          <button
-            onclick="changeCartQuantity(${item.id}, -1)"
+        <div class="payment-box">
+          <div class="payment-title">
+            Payment Method *
+          </div>
+          <div class="payment-options">
+            <label
+              class="payment-option selected"
+              onclick="selectPayment(this, 'Cash on Delivery')"
+            >
+              <input
+                type="radio"
+                name="payment"
+                value="Cash on Delivery"
+                checked
+              >
+              Cash on Delivery
+            </label>
+            <label
+              class="payment-option"
+              onclick="selectPayment(this, 'InstaPay')"
+            >
+              <input
+                type="radio"
+                name="payment"
+                value="InstaPay"
+              >
+              InstaPay
+            </label>
+            <label
+              class="payment-option"
+              onclick="selectPayment(this, 'Wallet')"
+            >
+              <input
+                type="radio"
+                name="payment"
+                value="Wallet"
+              >
+              Wallet
+            </label>
+          </div>
+          <div
+            id="transferNote"
+            class="transfer-note"
           >
-            −
-          </button>
-          <span>
-            ${item.quantity}
-          </span>
-          <button
-            onclick="changeCartQuantity(${item.id}, 1)"
-          >
-            +
-          </button>
-          <button
-            onclick="removeFromCart(${item.id})"
-          >
-            ×
-          </button>
+            Transfer screenshot upload will be enabled in the next step.
+          </div>
         </div>
-      </div>
-    `).join("");
-  const subtotal =
-    cart.reduce(
-      (total, item) =>
-        total +
-        Number(item.price) *
-        item.quantity,
-      0
-    );
-  const shipping =
-    subtotal >= 2000
-      ? 0
-      : 150;
-  const total =
-    subtotal + shipping;
-  footer.innerHTML = `
-    <div class="cart-total">
-      <span>
-        Subtotal
-      </span>
-      <strong>
-        ${subtotal.toLocaleString()}
-        EGP
-      </strong>
-    </div>
-    <div
-      class="cart-total"
-      style="
-        border:0;
-        margin-top:0;
-        padding-top:12px;
-        font-size:15px;
-      "
-    >
-      <span>
-        Shipping
-      </span>
-      <strong>
-        ${
-          shipping === 0
-            ? "FREE"
-            : shipping.toLocaleString() + " EGP"
-        }
-      </strong>
-    </div>
-    <div class="cart-total">
-      <span>
-        Total
-      </span>
-      <strong>
-        ${total.toLocaleString()}
-        EGP
-      </strong>
-    </div>
-    <button
-      class="checkout-btn"
-      onclick="startCheckout()"
-    >
-      CHECKOUT
-    </button>
-  `;
-}
-// =====================================================
-// CHECKOUT
-// =====================================================
-function startCheckout() {
-  if (!cart.length) {
-    alert(
-      "Your bag is empty."
-    );
-    return;
-  }
-  closeCart();
-  const subtotal =
-    cart.reduce(
-      (total, item) =>
-        total +
-        Number(item.price) *
-        item.quantity,
-      0
-    );
-  const shipping =
-    subtotal >= 2000
-      ? 0
-      : 150;
-  const total =
-    subtotal + shipping;
-  document.getElementById(
-    "checkoutContent"
-  ).innerHTML = `
-    <h2>
-      Checkout
-    </h2>
-    <div class="checkout-subtitle">
-      Complete your details to place your order.
-    </div>
-    <div class="checkout-shipping-message">
-      FREE SHIPPING ABOVE 2000 EGP
-    </div>
-    <div class="checkout-grid">
-      <div class="field">
-        <label>
-          Full Name *
-        </label>
-        <input
-          id="customerName"
-          type="text"
-          placeholder="Your full name"
+        <div class="checkout-summary">
+          <div class="summary-row">
+            <span>
+              Subtotal
+            </span>
+            <strong>
+              ${subtotal.toLocaleString()}
+              EGP
+            </strong>
+          </div>
+          <div class="summary-row">
+            <span>
+              Shipping
+            </span>
+            <strong>
+              ${
+                shipping === 0
+                  ? "FREE"
+                  : shipping.toLocaleString() + " EGP"
+              }
+            </strong>
+          </div>
+          <div class="summary-row">
+            <span>
+              Discount
+            </span>
+            <strong>
+              0 EGP
+            </strong>
+          </div>
+          <div class="summary-row total">
+            <span>
+              Total
+            </span>
+            <strong>
+              ${total.toLocaleString()}
+              EGP
+            </strong>
+          </div>
+        </div>
+        <div
+          id="checkoutMessage"
+          class="checkout-message"
+        ></div>
+        <button
+          id="confirmOrderBtn"
+          class="confirm-btn"
+          onclick="submitOrder()"
         >
-      </div>
-      <div class="field">
-        <label>
-          Phone *
-        </label>
-        <input
-          id="customerPhone"
-          type="tel"
-          placeholder="01XXXXXXXXX"
-        >
-      </div>
-      <div class="field">
-        <label>
-          Email
-        </label>
-        <input
-          id="customerEmail"
-          type="email"
-          placeholder="your@email.com"
-        >
-      </div>
-      <div class="field">
-        <label>
-          Governorate *
-        </label>
-        <select id="customerGovernorate">
-          <option value="">
-            Select Governorate
-          </option>
-          <option>Cairo</option>
-          <option>Giza</option>
-          <option>Alexandria</option>
-          <option>Qalyubia</option>
-          <option>Port Said</option>
-          <option>Suez</option>
-          <option>Damietta</option>
-          <option>Dakahlia</option>
-          <option>Sharqia</option>
-          <option>Gharbia</option>
-          <option>Monufia</option>
-          <option>Beheira</option>
-          <option>Kafr El Sheikh</option>
-          <option>Fayoum</option>
-          <option>Beni Suef</option>
-          <option>Minya</option>
-          <option>Asyut</option>
-          <option>Sohag</option>
-          <option>Qena</option>
-          <option>Luxor</option>
-          <option>Aswan</option>
-          <option>Red Sea</option>
-          <option>New Valley</option>
-          <option>North Sinai</option>
-          <option>South Sinai</option>
-        </select>
-      </div>
-      <div class="field full">
-        <label>
-          Address *
-        </label>
-        <textarea
-          id="customerAddress"
-          placeholder="Full delivery address"
-        ></textarea>
-      </div>
-    </div>
-    <div class="payment-box">
-      <div class="payment-title">
-        Payment Method *
-      </div>
-      <div class="payment-options">
-        <label
-          class="payment-option selected"
-          onclick="selectPayment(this, 'Cash on Delivery')"
-        >
-          <input
-            type="radio"
-            name="payment"
-            value="Cash on Delivery"
-            checked
-          >
-          Cash on Delivery
-        </label>
-        <label
-          class="payment-option"
-          onclick="selectPayment(this, 'InstaPay')"
-        >
-          <input
-            type="radio"
-            name="payment"
-            value="InstaPay"
-          >
-          InstaPay
-        </label>
-        <label
-          class="payment-option"
-          onclick="selectPayment(this, 'Wallet')"
-        >
-          <input
-            type="radio"
-            name="payment"
-            value="Wallet"
-          >
-          Wallet
-        </label>
-      </div>
-      <div
-        id="transferNote"
-        class="transfer-note"
-      >
-        Transfer screenshot upload will be enabled in the next step.
-      </div>
-    </div>
-    <div class="checkout-summary">
-      <div class="summary-row">
-        <span>
-          Subtotal
-        </span>
-        <strong>
-          ${subtotal.toLocaleString()}
-          EGP
-        </strong>
-      </div>
-      <div class="summary-row">
-        <span>
-          Shipping
-        </span>
-        <strong>
-          ${
-            shipping === 0
-              ? "FREE"
-              : shipping.toLocaleString() + " EGP"
-          }
-        </strong>
-      </div>
-      <div class="summary-row">
-        <span>
-          Discount
-        </span>
-        <strong>
-          0 EGP
-        </strong>
-      </div>
-      <div class="summary-row total">
-        <span>
-          Total
-        </span>
-        <strong>
-          ${total.toLocaleString()}
-          EGP
-        </strong>
-      </div>
-    </div>
-    <div
-      id="checkoutMessage"
-      class="checkout-message"
-    ></div>
-    <button
-      id="confirmOrderBtn"
-      class="confirm-btn"
-      onclick="submitOrder()"
-    >
-      CONFIRM ORDER
-    </button>
-  `;
-  document
-    .getElementById("checkoutOverlay")
-    .classList.add("active");
-  document.body.style.overflow =
-    "hidden";
-}
-// =====================================================
-// PAYMENT
-// =====================================================
-function selectPayment(
-  element,
-  payment
-) {
-  document
-    .querySelectorAll(".payment-option")
-    .forEach(option => {
-      option.classList.remove(
+          CONFIRM ORDER
+        </button>
+      `;
+      document
+        .getElementById("checkoutOverlay")
+        .classList.add("active");
+      document.body.style.overflow =
+        "hidden";
+    }
+    // =====================================================
+    // PAYMENT
+    // =====================================================
+    function selectPayment(
+      element,
+      payment
+    ) {
+      document
+        .querySelectorAll(".payment-option")
+        .forEach(option => {
+          option.classList.remove(
+            "selected"
+          );
+        });
+      element.classList.add(
         "selected"
       );
-    });
-  element.classList.add(
-    "selected"
-  );
-  const radio =
-    element.querySelector(
-      'input[type="radio"]'
-    );
-  if (radio) {
-    radio.checked = true;
-  }
-  const note =
-    document.getElementById(
-      "transferNote"
-    );
-  if (
-    payment === "InstaPay" ||
-    payment === "Wallet"
-  ) {
-    note.style.display =
-      "block";
-  } else {
-    note.style.display =
-      "none";
-  }
-}
-// =====================================================
-// CLOSE CHECKOUT
-// =====================================================
-function closeCheckout() {
-  document
-    .getElementById("checkoutOverlay")
-    .classList.remove("active");
-  document.body.style.overflow =
-    "";
-}
-// =====================================================
-// SUBMIT ORDER
-// =====================================================
-async function submitOrder() {
-  const name =
-    document.getElementById(
-      "customerName"
-    ).value.trim();
-  const phone =
-    document.getElementById(
-      "customerPhone"
-    ).value.trim();
-  const email =
-    document.getElementById(
-      "customerEmail"
-    ).value.trim();
-  const governorate =
-    document.getElementById(
-      "customerGovernorate"
-    ).value;
-  const address =
-    document.getElementById(
-      "customerAddress"
-    ).value.trim();
-  const paymentElement =
-    document.querySelector(
-      'input[name="payment"]:checked'
-    );
-  const paymentMethod =
-    paymentElement
-      ? paymentElement.value
-      : "";
-  const button =
-    document.getElementById(
-      "confirmOrderBtn"
-    );
-  // =========================
-  // VALIDATION
-  // =========================
-  if (!name) {
-    showCheckoutError(
-      "Please enter your full name."
-    );
-    return;
-  }
-  if (!phone) {
-    showCheckoutError(
-      "Please enter your phone number."
-    );
-    return;
-  }
-  if (!governorate) {
-    showCheckoutError(
-      "Please select your governorate."
-    );
-    return;
-  }
-  if (!address) {
-    showCheckoutError(
-      "Please enter your full address."
-    );
-    return;
-  }
-  if (!paymentMethod) {
-    showCheckoutError(
-      "Please select a payment method."
-    );
-    return;
-  }
-  if (!cart.length) {
-    showCheckoutError(
-      "Your bag is empty."
-    );
-    return;
-  }
-  // =========================
-  // CALCULATE TOTALS
-  // =========================
-  const subtotal =
-    cart.reduce(
-      (total, item) =>
-        total +
-        Number(item.price) *
-        Number(item.quantity),
-      0
-    );
-  const shipping =
-    subtotal >= 2000
-      ? 0
-      : 150;
-  const discount =
-    0;
-  const total =
-    subtotal +
-    shipping -
-    discount;
-  button.disabled =
-    true;
-  button.textContent =
-    "PLACING ORDER...";
-  try {
-    // ==========================================
-    // CREATE UNIQUE ORDER ID
-    // ==========================================
-    const orderId =
-      crypto.randomUUID();
-    // ==========================================
-    // INSERT ORDER
-    // ==========================================
-    const {
-      error: orderError
-    } =
-      await supabaseClient
-        .from("orders")
-        .insert({
-          id:
-            orderId,
-          customer_name:
-            name,
-          phone:
-            phone,
-          email:
-            email || null,
-          governorate:
-            governorate,
-          address:
-            address,
-          payment_method:
-            paymentMethod,
-          transfer_image_url:
-            null,
-          subtotal:
-            subtotal,
-          shipping:
-            shipping,
-          discount:
-            discount,
-          total:
-            total,
-          status:
-            "pending",
-          notes:
-            null
-        });
-    if (orderError) {
-      console.error(
-        "ORDER INSERT ERROR:",
-        orderError
-      );
-      throw orderError;
-    }
-    // ==========================================
-    // INSERT ORDER ITEMS
-    // ==========================================
-    const orderItems =
-      cart.map(item => ({
-        order_id:
-          orderId,
-        product_id:
-          item.id,
-        product_name:
-          item.name,
-        quantity:
-          Number(item.quantity),
-        price:
-          Number(item.price),
-        total:
-          Number(item.price) *
-          Number(item.quantity)
-      }));
-    const {
-      error: itemsError
-    } =
-      await supabaseClient
-        .from("order_items")
-        .insert(
-          orderItems
+      const radio =
+        element.querySelector(
+          'input[type="radio"]'
         );
-    if (itemsError) {
-      console.error(
-        "ORDER ITEMS INSERT ERROR:",
-        itemsError
-      );
-      throw itemsError;
+      if (radio) {
+        radio.checked = true;
+      }
+      const note =
+        document.getElementById(
+          "transferNote"
+        );
+      if (
+        payment === "InstaPay" ||
+        payment === "Wallet"
+      ) {
+        note.style.display =
+          "block";
+      } else {
+        note.style.display =
+          "none";
+      }
     }
-    // ==========================================
-    // CLEAR CART
-    // ==========================================
-    cart =
-      [];
-    saveCart();
+    // =====================================================
+    // CLOSE CHECKOUT
+    // =====================================================
+    function closeCheckout() {
+      document
+        .getElementById("checkoutOverlay")
+        .classList.remove("active");
+      document.body.style.overflow =
+        "";
+    }
+    // =====================================================
+    // SUBMIT ORDER
+    // =====================================================
+    async function submitOrder() {
+      const name =
+        document.getElementById(
+          "customerName"
+        ).value.trim();
+      const phone =
+        document.getElementById(
+          "customerPhone"
+        ).value.trim();
+      const email =
+        document.getElementById(
+          "customerEmail"
+        ).value.trim();
+      const governorate =
+        document.getElementById(
+          "customerGovernorate"
+        ).value;
+      const address =
+        document.getElementById(
+          "customerAddress"
+        ).value.trim();
+      const paymentElement =
+        document.querySelector(
+          'input[name="payment"]:checked'
+        );
+      const paymentMethod =
+        paymentElement
+          ? paymentElement.value
+          : "";
+      const button =
+        document.getElementById(
+          "confirmOrderBtn"
+        );
+      // =========================
+      // VALIDATION
+      // =========================
+      if (!name) {
+        showCheckoutError(
+          "Please enter your full name."
+        );
+        return;
+      }
+      if (!phone) {
+        showCheckoutError(
+          "Please enter your phone number."
+        );
+        return;
+      }
+      if (!governorate) {
+        showCheckoutError(
+          "Please select your governorate."
+        );
+        return;
+      }
+      if (!address) {
+        showCheckoutError(
+          "Please enter your full address."
+        );
+        return;
+      }
+      if (!paymentMethod) {
+        showCheckoutError(
+          "Please select a payment method."
+        );
+        return;
+      }
+      if (!cart.length) {
+        showCheckoutError(
+          "Your bag is empty."
+        );
+        return;
+      }
+      // =========================
+      // CALCULATE TOTALS
+      // =========================
+      const subtotal =
+        cart.reduce(
+          (total, item) =>
+            total +
+            Number(item.price) *
+            Number(item.quantity),
+          0
+        );
+      const shipping =
+        subtotal >= 2000
+          ? 0
+          : 150;
+      const discount =
+        0;
+      const total =
+        subtotal +
+        shipping -
+        discount;
+      button.disabled =
+        true;
+      button.textContent =
+        "PLACING ORDER...";
+      try {
+        // ==========================================
+        // PREPARE ORDER ITEMS
+        // ==========================================
+        const orderItems =
+          cart.map(item => ({
+            product_id:
+              Number(item.id),
+            product_name:
+              item.name,
+            quantity:
+              Number(item.quantity),
+            price:
+              Number(item.price),
+            total:
+              Number(item.price) *
+              Number(item.quantity)
+          }));
+        // ==========================================
+        // CREATE ORDER + ITEMS
+        // ==========================================
+        const {
+          data: orderId,
+          error
+        } =
+          await supabaseClient.rpc(
+            "create_order_with_items",
+            {
+              p_customer_name:
+                name,
+              p_phone:
+                phone,
+              p_email:
+                email || null,
+              p_governorate:
+                governorate,
+              p_address:
+                address,
+              p_payment_method:
+                paymentMethod,
+              p_transfer_image_url:
+                null,
+              p_subtotal:
+                subtotal,
+              p_shipping:
+                shipping,
+              p_discount:
+                discount,
+              p_total:
+                total,
+              p_status:
+                "pending",
+              p_notes:
+                null,
+              p_items:
+                orderItems
+            }
+          );
+        if (error) {
+          console.error(
+            "CREATE ORDER ERROR:",
+            error
+          );
+          throw error;
+        }
+        // ==========================================
+        // CLEAR CART
+        // ==========================================
+        cart = [];
+        saveCart();
+        updateCartCount();
+        // ==========================================
+        // SUCCESS
+        // ==========================================
+        document.getElementById(
+          "checkoutContent"
+        ).innerHTML = `
+          <div class="success-box">
+            <div class="eyebrow">
+              Order Confirmed
+            </div>
+            <h2>
+              Thank You.
+            </h2>
+            <p>
+              Your Obsession has been received.
+            </p>
+            <div class="order-number">
+              ORDER #${orderId}
+            </div>
+            <p>
+              We will contact you soon to confirm your order.
+            </p>
+            <button
+              class="confirm-btn"
+              onclick="closeCheckout()"
+            >
+              CONTINUE SHOPPING
+            </button>
+          </div>
+        `;
+      } catch (error) {
+        console.error(
+          "FULL ORDER ERROR:",
+          error
+        );
+        showCheckoutError(
+          error?.message ||
+          "Something went wrong while placing your order."
+        );
+        button.disabled =
+          false;
+        button.textContent =
+          "CONFIRM ORDER";
+      }
+    }
+    // =====================================================
+    // CHECKOUT ERROR
+    // =====================================================
+    function showCheckoutError(
+      text
+    ) {
+      const message =
+        document.getElementById(
+          "checkoutMessage"
+        );
+      if (!message) return;
+      message.textContent =
+        text;
+      message.className =
+        "checkout-message error";
+    }
+    // =====================================================
+    // HELPERS
+    // =====================================================
+    function showAddedMessage(
+      name
+    ) {
+      console.log(
+        name +
+        " added to cart."
+      );
+    }
+    function escapeHtml(
+      value
+    ) {
+      return String(
+        value ?? ""
+      )
+        .replace(
+          /&/g,
+          "&amp;"
+        )
+        .replace(
+          /</g,
+          "&lt;"
+        )
+        .replace(
+          />/g,
+          "&gt;"
+        )
+        .replace(
+          /"/g,
+          "&quot;"
+        )
+        .replace(
+          /'/g,
+          "&#039;"
+        );
+    }
+    // =====================================================
+    // START
+    // =====================================================
+    loadProducts();
     updateCartCount();
-    // ==========================================
-    // SUCCESS
-    // ==========================================
-    document.getElementById(
-      "checkoutContent"
-    ).innerHTML = `
-      <div class="success-box">
-        <div class="eyebrow">
-          Order Confirmed
-        </div>
-        <h2>
-          Thank You.
-        </h2>
-        <p>
-          Your Obsession has been received.
-        </p>
-        <div class="order-number">
-          ORDER #${orderId}
-        </div>
-        <p>
-          We will contact you soon to confirm your order.
-        </p>
-        <button
-          class="confirm-btn"
-          onclick="closeCheckout()"
-        >
-          CONTINUE SHOPPING
-        </button>
-      </div>
-    `;
-  } catch (error) {
-    console.error(
-      "FULL ORDER ERROR:",
-      error
-    );
-    showCheckoutError(
-      "Something went wrong while placing your order. Please try again."
-    );
-    button.disabled =
-      false;
-    button.textContent =
-      "CONFIRM ORDER";
-  }
-}
-// =====================================================
-// CHECKOUT ERROR
-// =====================================================
-function showCheckoutError(
-  text
-) {
-  const message =
-    document.getElementById(
-      "checkoutMessage"
-    );
-  if (!message) return;
-  message.textContent =
-    text;
-  message.className =
-    "checkout-message error";
-}
-// =====================================================
-// HELPERS
-// =====================================================
-function showAddedMessage(
-  name
-) {
-  console.log(
-    name +
-    " added to cart."
-  );
-}
-function escapeHtml(
-  value
-) {
-  return String(
-    value ?? ""
-  )
-    .replace(
-      /&/g,
-      "&amp;"
-    )
-    .replace(
-      /</g,
-      "&lt;"
-    )
-    .replace(
-      />/g,
-      "&gt;"
-    )
-    .replace(
-      /"/g,
-      "&quot;"
-    )
-    .replace(
-      /'/g,
-      "&#039;"
-    );
-}
-// =====================================================
-// START
-// =====================================================
-loadProducts();
-updateCartCount();
-</script>
+  </script>
 </body>
 </html>
