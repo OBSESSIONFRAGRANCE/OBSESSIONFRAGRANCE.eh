@@ -116,6 +116,23 @@
       background: #f5f1eb;
       color: #111;
     }
+    /* FREE SHIPPING */
+    .shipping-banner {
+      width: 100%;
+      text-align: center;
+      padding: 16px 20px;
+      background: #15110f;
+      border-top: 1px solid rgba(255,255,255,.06);
+      border-bottom: 1px solid rgba(255,255,255,.08);
+      color: #f2eee8;
+      font-size: 12px;
+      letter-spacing: 4px;
+      font-weight: 700;
+      text-transform: uppercase;
+    }
+    .shipping-banner span {
+      color: #b9aaa0;
+    }
     section {
       padding: 90px 0;
     }
@@ -230,7 +247,6 @@
       color: #777;
       font-size: 12px;
     }
-    /* MODALS */
     .overlay {
       position: fixed;
       inset: 0;
@@ -351,7 +367,6 @@
       font-weight: 700;
       letter-spacing: 1px;
     }
-    /* CART */
     .cart-modal {
       width: min(650px, 100%);
       margin: 30px auto;
@@ -362,7 +377,18 @@
     }
     .cart-modal h2 {
       font-size: 35px;
-      margin-bottom: 25px;
+      margin-bottom: 8px;
+    }
+    .cart-shipping-message {
+      margin-bottom: 20px;
+      padding: 12px;
+      border: 1px solid #332b26;
+      background: #15110f;
+      color: #c6b9b0;
+      text-align: center;
+      font-size: 11px;
+      letter-spacing: 2px;
+      text-transform: uppercase;
     }
     .cart-item {
       display: grid;
@@ -413,7 +439,6 @@
       text-align: center;
       padding: 40px 0;
     }
-    /* CHECKOUT */
     .checkout-modal {
       width: min(800px, 100%);
       margin: 30px auto;
@@ -428,8 +453,19 @@
     }
     .checkout-subtitle {
       color: #777;
-      margin-bottom: 30px;
+      margin-bottom: 15px;
       font-size: 13px;
+    }
+    .checkout-shipping-message {
+      margin-bottom: 28px;
+      padding: 13px;
+      border: 1px solid #332b26;
+      background: #15110f;
+      color: #c6b9b0;
+      text-align: center;
+      font-size: 11px;
+      letter-spacing: 2px;
+      text-transform: uppercase;
     }
     .checkout-grid {
       display: grid;
@@ -574,8 +610,9 @@
       margin: 25px 0;
       padding: 18px;
       border: 1px solid #39322e;
-      font-size: 18px;
-      letter-spacing: 2px;
+      font-size: 14px;
+      letter-spacing: 1px;
+      word-break: break-all;
     }
     @media (max-width: 850px) {
       .products {
@@ -618,6 +655,10 @@
       .payment-options {
         grid-template-columns: 1fr;
       }
+      .shipping-banner {
+        font-size: 10px;
+        letter-spacing: 2px;
+      }
     }
   </style>
 </head>
@@ -634,9 +675,12 @@
   </div>
 </header>
 <main>
+  <!-- HERO -->
   <section class="hero">
     <div>
-      <div class="eyebrow">Obsession Fragrance</div>
+      <div class="eyebrow">
+        Obsession Fragrance
+      </div>
       <h1>
         Obsession<br>
         Has A Scent.
@@ -650,6 +694,11 @@
       </a>
     </div>
   </section>
+  <!-- FREE SHIPPING -->
+  <div class="shipping-banner">
+    FREE SHIPPING <span>ABOVE 2000 EGP</span>
+  </div>
+  <!-- COLLECTION -->
   <section id="collection">
     <div class="container">
       <div class="section-title">
@@ -663,6 +712,7 @@
       </div>
     </div>
   </section>
+  <!-- ABOUT -->
   <section class="about">
     <div class="container">
       <div class="section-title">
@@ -684,6 +734,9 @@
     Not A Perfume . An Obsession
   </div>
   <div style="margin-top:15px;">
+    FREE SHIPPING ABOVE 2000 EGP
+  </div>
+  <div style="margin-top:15px;">
     OBSESSION2027@gmail.com
   </div>
 </footer>
@@ -699,6 +752,9 @@
   <div class="cart-modal">
     <button class="close" onclick="closeCart()">×</button>
     <h2>Your Bag</h2>
+    <div class="cart-shipping-message">
+      FREE SHIPPING ABOVE 2000 EGP
+    </div>
     <div id="cartItems"></div>
     <div id="cartFooter"></div>
   </div>
@@ -727,9 +783,10 @@ const supabaseClient =
 // GLOBAL DATA
 // =====================================================
 let products = [];
-let cart = JSON.parse(
-  localStorage.getItem("obsession_cart") || "[]"
-);
+let cart =
+  JSON.parse(
+    localStorage.getItem("obsession_cart") || "[]"
+  );
 // =====================================================
 // LOAD PRODUCTS
 // =====================================================
@@ -737,7 +794,10 @@ async function loadProducts() {
   const container =
     document.getElementById("products");
   try {
-    const { data, error } =
+    const {
+      data,
+      error
+    } =
       await supabaseClient
         .from("products")
         .select("*")
@@ -748,7 +808,8 @@ async function loadProducts() {
     if (error) {
       throw error;
     }
-    products = data || [];
+    products =
+      data || [];
     renderProducts();
     updateCartCount();
   } catch (error) {
@@ -847,7 +908,9 @@ function renderProducts() {
 function openProduct(id) {
   const product =
     products.find(
-      p => Number(p.id) === Number(id)
+      p =>
+        Number(p.id) ===
+        Number(id)
     );
   if (!product) return;
   const image =
@@ -947,8 +1010,8 @@ function changeDetailsQuantity(amount) {
   window.currentDetailsQuantity =
     Math.max(
       1,
-      (window.currentDetailsQuantity || 1)
-      + amount
+      (window.currentDetailsQuantity || 1) +
+      amount
     );
   const element =
     document.getElementById(
@@ -985,13 +1048,16 @@ function addToCart(
 ) {
   const product =
     products.find(
-      p => Number(p.id) === Number(id)
+      p =>
+        Number(p.id) ===
+        Number(id)
     );
   if (!product) return;
   const existing =
     cart.find(
       item =>
-        Number(item.id) === Number(id)
+        Number(item.id) ===
+        Number(id)
     );
   if (existing) {
     existing.quantity +=
@@ -1000,9 +1066,8 @@ function addToCart(
     cart.push({
       id: product.id,
       name: product.name,
-      price: Number(
-        product.price
-      ),
+      price:
+        Number(product.price),
       quantity: quantity,
       image_url:
         product.image_url || ""
@@ -1071,18 +1136,14 @@ function updateCartCount() {
 function openCart() {
   renderCart();
   document
-    .getElementById(
-      "cartOverlay"
-    )
+    .getElementById("cartOverlay")
     .classList.add("active");
   document.body.style.overflow =
     "hidden";
 }
 function closeCart() {
   document
-    .getElementById(
-      "cartOverlay"
-    )
+    .getElementById("cartOverlay")
     .classList.remove("active");
   document.body.style.overflow =
     "";
@@ -1110,23 +1171,16 @@ function renderCart() {
       <div class="cart-item">
         <div>
           <div class="cart-item-name">
-            ${escapeHtml(
-              item.name
-            )}
+            ${escapeHtml(item.name)}
           </div>
           <div class="cart-item-price">
-            ${Number(
-              item.price
-            ).toLocaleString()}
+            ${Number(item.price).toLocaleString()}
             EGP
           </div>
         </div>
         <div class="cart-controls">
           <button
-            onclick="changeCartQuantity(
-              ${item.id},
-              -1
-            )"
+            onclick="changeCartQuantity(${item.id}, -1)"
           >
             −
           </button>
@@ -1134,17 +1188,12 @@ function renderCart() {
             ${item.quantity}
           </span>
           <button
-            onclick="changeCartQuantity(
-              ${item.id},
-              1
-            )"
+            onclick="changeCartQuantity(${item.id}, 1)"
           >
             +
           </button>
           <button
-            onclick="removeFromCart(
-              ${item.id}
-            )"
+            onclick="removeFromCart(${item.id})"
           >
             ×
           </button>
@@ -1155,10 +1204,8 @@ function renderCart() {
     cart.reduce(
       (total, item) =>
         total +
-        (
-          Number(item.price) *
-          item.quantity
-        ),
+        Number(item.price) *
+        item.quantity,
       0
     );
   const shipping =
@@ -1193,8 +1240,7 @@ function renderCart() {
         ${
           shipping === 0
             ? "FREE"
-            : shipping.toLocaleString()
-              + " EGP"
+            : shipping.toLocaleString() + " EGP"
         }
       </strong>
     </div>
@@ -1230,10 +1276,8 @@ function startCheckout() {
     cart.reduce(
       (total, item) =>
         total +
-        (
-          Number(item.price) *
-          item.quantity
-        ),
+        Number(item.price) *
+        item.quantity,
       0
     );
   const shipping =
@@ -1250,6 +1294,9 @@ function startCheckout() {
     </h2>
     <div class="checkout-subtitle">
       Complete your details to place your order.
+    </div>
+    <div class="checkout-shipping-message">
+      FREE SHIPPING ABOVE 2000 EGP
     </div>
     <div class="checkout-grid">
       <div class="field">
@@ -1392,8 +1439,7 @@ function startCheckout() {
           ${
             shipping === 0
               ? "FREE"
-              : shipping.toLocaleString()
-                + " EGP"
+              : shipping.toLocaleString() + " EGP"
           }
         </strong>
       </div>
@@ -1428,21 +1474,20 @@ function startCheckout() {
     </button>
   `;
   document
-    .getElementById(
-      "checkoutOverlay"
-    )
+    .getElementById("checkoutOverlay")
     .classList.add("active");
   document.body.style.overflow =
     "hidden";
 }
+// =====================================================
+// PAYMENT
+// =====================================================
 function selectPayment(
   element,
   payment
 ) {
   document
-    .querySelectorAll(
-      ".payment-option"
-    )
+    .querySelectorAll(".payment-option")
     .forEach(option => {
       option.classList.remove(
         "selected"
@@ -1451,6 +1496,13 @@ function selectPayment(
   element.classList.add(
     "selected"
   );
+  const radio =
+    element.querySelector(
+      'input[type="radio"]'
+    );
+  if (radio) {
+    radio.checked = true;
+  }
   const note =
     document.getElementById(
       "transferNote"
@@ -1466,11 +1518,12 @@ function selectPayment(
       "none";
   }
 }
+// =====================================================
+// CLOSE CHECKOUT
+// =====================================================
 function closeCheckout() {
   document
-    .getElementById(
-      "checkoutOverlay"
-    )
+    .getElementById("checkoutOverlay")
     .classList.remove("active");
   document.body.style.overflow =
     "";
@@ -1507,15 +1560,13 @@ async function submitOrder() {
     paymentElement
       ? paymentElement.value
       : "";
-  const message =
-    document.getElementById(
-      "checkoutMessage"
-    );
   const button =
     document.getElementById(
       "confirmOrderBtn"
     );
+  // =========================
   // VALIDATION
+  // =========================
   if (!name) {
     showCheckoutError(
       "Please enter your full name."
@@ -1552,39 +1603,48 @@ async function submitOrder() {
     );
     return;
   }
+  // =========================
   // CALCULATE TOTALS
+  // =========================
   const subtotal =
     cart.reduce(
       (total, item) =>
         total +
-        (
-          Number(item.price) *
-          item.quantity
-        ),
+        Number(item.price) *
+        Number(item.quantity),
       0
     );
   const shipping =
     subtotal >= 2000
       ? 0
       : 150;
-  const discount = 0;
+  const discount =
+    0;
   const total =
     subtotal +
     shipping -
     discount;
-  // DISABLE BUTTON
-  button.disabled = true;
+  button.disabled =
+    true;
   button.textContent =
     "PLACING ORDER...";
   try {
+    // ==========================================
+    // CREATE UNIQUE ORDER ID
+    // ==========================================
+    const orderId =
+      crypto.randomUUID();
+    // ==========================================
     // INSERT ORDER
+    // ==========================================
     const {
-      data: order,
       error: orderError
     } =
       await supabaseClient
         .from("orders")
         .insert({
+          id:
+            orderId,
           customer_name:
             name,
           phone:
@@ -1611,28 +1671,32 @@ async function submitOrder() {
             "pending",
           notes:
             null
-        })
-        .select()
-        .single();
+        });
     if (orderError) {
+      console.error(
+        "ORDER INSERT ERROR:",
+        orderError
+      );
       throw orderError;
     }
+    // ==========================================
     // INSERT ORDER ITEMS
+    // ==========================================
     const orderItems =
       cart.map(item => ({
         order_id:
-          order.id,
+          orderId,
         product_id:
           item.id,
         product_name:
           item.name,
         quantity:
-          item.quantity,
+          Number(item.quantity),
         price:
           Number(item.price),
         total:
           Number(item.price) *
-          item.quantity
+          Number(item.quantity)
       }));
     const {
       error: itemsError
@@ -1643,13 +1707,22 @@ async function submitOrder() {
           orderItems
         );
     if (itemsError) {
+      console.error(
+        "ORDER ITEMS INSERT ERROR:",
+        itemsError
+      );
       throw itemsError;
     }
+    // ==========================================
     // CLEAR CART
-    cart = [];
+    // ==========================================
+    cart =
+      [];
     saveCart();
     updateCartCount();
+    // ==========================================
     // SUCCESS
+    // ==========================================
     document.getElementById(
       "checkoutContent"
     ).innerHTML = `
@@ -1664,7 +1737,7 @@ async function submitOrder() {
           Your Obsession has been received.
         </p>
         <div class="order-number">
-          ORDER #${order.id}
+          ORDER #${orderId}
         </div>
         <p>
           We will contact you soon to confirm your order.
@@ -1679,13 +1752,14 @@ async function submitOrder() {
     `;
   } catch (error) {
     console.error(
-      "Order error:",
+      "FULL ORDER ERROR:",
       error
     );
     showCheckoutError(
       "Something went wrong while placing your order. Please try again."
     );
-    button.disabled = false;
+    button.disabled =
+      false;
     button.textContent =
       "CONFIRM ORDER";
   }
