@@ -11,35 +11,29 @@
       margin: 0;
       padding: 0;
     }
-
     body {
       font-family: Arial, Helvetica, sans-serif;
       background: #0a0a0a;
       color: #f5f1eb;
       min-height: 100vh;
     }
-
     button,
     input,
     select,
     textarea {
       font: inherit;
     }
-
     button {
       cursor: pointer;
     }
-
     a {
       color: inherit;
       text-decoration: none;
     }
-
     .container {
       width: min(1180px, 92%);
       margin: auto;
     }
-
     header {
       position: sticky;
       top: 0;
@@ -48,7 +42,6 @@
       backdrop-filter: blur(12px);
       border-bottom: 1px solid rgba(255,255,255,.08);
     }
-
     .nav {
       min-height: 76px;
       display: flex;
@@ -56,13 +49,11 @@
       justify-content: space-between;
       gap: 20px;
     }
-
     .logo {
       font-size: 19px;
       letter-spacing: 4px;
       font-weight: 700;
     }
-
     .logo span {
       display: block;
       font-size: 9px;
@@ -71,7 +62,6 @@
       margin-top: 5px;
       font-weight: 400;
     }
-
     .cart-btn {
       border: 1px solid #51453f;
       background: transparent;
@@ -80,12 +70,10 @@
       border-radius: 30px;
       transition: .25s;
     }
-
     .cart-btn:hover {
       background: #f5f1eb;
       color: #111;
     }
-
     .hero {
       min-height: 72vh;
       display: grid;
@@ -93,18 +81,9 @@
       text-align: center;
       padding: 80px 20px;
       background:
-        radial-gradient(
-          circle at center,
-          rgba(116,82,65,.18),
-          transparent 42%
-        ),
-        linear-gradient(
-          180deg,
-          #111 0%,
-          #0a0a0a 100%
-        );
+        radial-gradient(circle at center, rgba(116,82,65,.18), transparent 42%),
+        linear-gradient(180deg, #111 0%, #0a0a0a 100%);
     }
-
     .eyebrow {
       color: #a99d94;
       letter-spacing: 6px;
@@ -112,14 +91,12 @@
       margin-bottom: 25px;
       text-transform: uppercase;
     }
-
     .hero h1 {
       font-size: clamp(45px, 9vw, 100px);
       line-height: .95;
       letter-spacing: -4px;
       text-transform: uppercase;
     }
-
     .hero p {
       max-width: 650px;
       margin: 28px auto;
@@ -127,7 +104,6 @@
       line-height: 1.8;
       font-size: 15px;
     }
-
     .hero-btn {
       display: inline-block;
       padding: 14px 25px;
@@ -136,26 +112,22 @@
       margin-top: 12px;
       transition: .25s;
     }
-
     .hero-btn:hover {
       background: #f5f1eb;
       color: #111;
     }
-
     .about {
       background: #0f0f0f;
       border-top: 1px solid rgba(255,255,255,.06);
       border-bottom: 1px solid rgba(255,255,255,.06);
       padding: 90px 0;
     }
-
     .about-text {
       max-width: 800px;
       color: #aaa39d;
       font-size: 18px;
       line-height: 1.9;
     }
-
     .shipping-banner {
       width: 100%;
       text-align: center;
@@ -169,62 +141,47 @@
       font-weight: 700;
       text-transform: uppercase;
     }
-
     .shipping-banner span {
       color: #b9aaa0;
     }
-
     section {
       padding: 90px 0;
     }
-
     .section-title {
       margin-bottom: 45px;
     }
-
     .section-title small {
       color: #9d928a;
       letter-spacing: 4px;
       font-size: 10px;
       text-transform: uppercase;
     }
-
     .section-title h2 {
       font-size: clamp(32px, 5vw, 58px);
       margin-top: 12px;
       letter-spacing: -2px;
     }
-
     .products {
       display: grid;
       grid-template-columns: repeat(3, 1fr);
       gap: 24px;
     }
-
     .product-card {
       border: 1px solid rgba(255,255,255,.08);
       background: #101010;
       overflow: hidden;
-      transition:
-        transform .25s,
-        border-color .25s;
+      transition: transform .25s, border-color .25s;
     }
-
     .product-card:hover {
       transform: translateY(-5px);
       border-color: rgba(255,255,255,.25);
     }
-
     .product-image {
       height: 360px;
       display: grid;
       place-items: center;
       background:
-        radial-gradient(
-          circle,
-          rgba(115,83,68,.18),
-          transparent 55%
-        ),
+        radial-gradient(circle, rgba(115,83,68,.18), transparent 55%),
         #0d0d0d;
       color: #625952;
       font-size: 11px;
@@ -232,17 +189,14 @@
       text-transform: uppercase;
       overflow: hidden;
     }
-
     .product-image img {
       width: 100%;
       height: 100%;
       object-fit: cover;
     }
-
     .product-info {
       padding: 22px;
     }
-
     .gender {
       color: #9b9088;
       font-size: 10px;
@@ -250,28 +204,23 @@
       text-transform: uppercase;
       margin-bottom: 10px;
     }
-
     .product-name {
       font-size: 22px;
       margin-bottom: 7px;
     }
-
     .original {
       color: #777;
       font-size: 11px;
       margin-bottom: 18px;
     }
-
     .price {
       font-size: 17px;
       margin-bottom: 18px;
     }
-
     .card-actions {
       display: flex;
       gap: 9px;
     }
-
     .details-btn,
     .add-btn {
       flex: 1;
@@ -281,28 +230,23 @@
       background: transparent;
       color: #fff;
     }
-
     .add-btn {
       background: #f2eee8;
       color: #111;
       border-color: #f2eee8;
     }
-
     .details-btn:hover {
       background: #211c19;
     }
-
     .add-btn:hover {
       opacity: .85;
     }
-
     footer {
       padding: 50px 0;
       text-align: center;
       color: #777;
       font-size: 12px;
     }
-
     .overlay {
       position: fixed;
       inset: 0;
@@ -313,11 +257,9 @@
       overflow-y: auto;
       padding: 25px;
     }
-
     .overlay.active {
       display: block;
     }
-
     .modal {
       width: min(900px, 100%);
       margin: 30px auto;
@@ -325,7 +267,6 @@
       border: 1px solid rgba(255,255,255,.12);
       position: relative;
     }
-
     .close {
       position: absolute;
       top: 15px;
@@ -339,66 +280,52 @@
       color: #fff;
       font-size: 20px;
     }
-
     .details-grid {
       display: grid;
       grid-template-columns: 1fr 1fr;
     }
-
     .details-photo {
       min-height: 560px;
       display: grid;
       place-items: center;
       background:
-        radial-gradient(
-          circle,
-          rgba(115,83,68,.2),
-          transparent 55%
-        ),
+        radial-gradient(circle, rgba(115,83,68,.2), transparent 55%),
         #0c0c0c;
     }
-
     .details-photo img {
       width: 100%;
       height: 100%;
       object-fit: cover;
     }
-
     .details-content {
       padding: 55px 38px;
     }
-
     .details-content h2 {
       font-size: 43px;
       line-height: 1;
       margin-bottom: 12px;
     }
-
     .details-original {
       color: #777;
       font-size: 12px;
       margin-bottom: 25px;
     }
-
     .details-description {
       color: #aaa;
       line-height: 1.8;
       font-size: 14px;
       margin-bottom: 28px;
     }
-
     .stats {
       display: grid;
       grid-template-columns: 1fr 1fr;
       gap: 12px;
       margin-bottom: 28px;
     }
-
     .stat {
       border: 1px solid #292929;
       padding: 15px;
     }
-
     .stat span {
       display: block;
       color: #777;
@@ -407,23 +334,19 @@
       text-transform: uppercase;
       margin-bottom: 7px;
     }
-
     .stat strong {
       font-size: 13px;
     }
-
     .details-price {
       font-size: 25px;
       margin-bottom: 20px;
     }
-
     .quantity {
       display: flex;
       align-items: center;
       gap: 15px;
       margin-bottom: 18px;
     }
-
     .quantity button {
       width: 35px;
       height: 35px;
@@ -431,12 +354,10 @@
       border: 1px solid #555;
       color: #fff;
     }
-
     .quantity span {
       min-width: 20px;
       text-align: center;
     }
-
     .big-add {
       width: 100%;
       padding: 16px;
@@ -446,7 +367,6 @@
       font-weight: 700;
       letter-spacing: 1px;
     }
-
     .cart-modal {
       width: min(650px, 100%);
       margin: 30px auto;
@@ -455,12 +375,10 @@
       padding: 35px;
       position: relative;
     }
-
     .cart-modal h2 {
       font-size: 35px;
       margin-bottom: 8px;
     }
-
     .cart-shipping-message {
       margin-bottom: 20px;
       padding: 12px;
@@ -472,7 +390,6 @@
       letter-spacing: 2px;
       text-transform: uppercase;
     }
-
     .cart-item {
       display: grid;
       grid-template-columns: 1fr auto;
@@ -480,23 +397,19 @@
       padding: 18px 0;
       border-bottom: 1px solid #252525;
     }
-
     .cart-item-name {
       font-size: 16px;
       margin-bottom: 6px;
     }
-
     .cart-item-price {
       color: #999;
       font-size: 13px;
     }
-
     .cart-controls {
       display: flex;
       align-items: center;
       gap: 8px;
     }
-
     .cart-controls button {
       width: 28px;
       height: 28px;
@@ -504,7 +417,6 @@
       color: white;
       border: 1px solid #444;
     }
-
     .cart-total {
       display: flex;
       justify-content: space-between;
@@ -513,7 +425,6 @@
       padding-top: 20px;
       border-top: 1px solid #333;
     }
-
     .checkout-btn {
       width: 100%;
       margin-top: 20px;
@@ -523,13 +434,11 @@
       color: #111;
       font-weight: bold;
     }
-
     .empty {
       color: #888;
       text-align: center;
       padding: 40px 0;
     }
-
     .checkout-modal {
       width: min(800px, 100%);
       margin: 30px auto;
@@ -538,18 +447,15 @@
       padding: 35px;
       position: relative;
     }
-
     .checkout-modal h2 {
       font-size: 36px;
       margin-bottom: 8px;
     }
-
     .checkout-subtitle {
       color: #777;
       margin-bottom: 15px;
       font-size: 13px;
     }
-
     .checkout-shipping-message {
       margin-bottom: 28px;
       padding: 13px;
@@ -561,21 +467,17 @@
       letter-spacing: 2px;
       text-transform: uppercase;
     }
-
     .checkout-grid {
       display: grid;
       grid-template-columns: 1fr 1fr;
       gap: 16px;
     }
-
     .field {
       margin-bottom: 16px;
     }
-
     .field.full {
       grid-column: 1 / -1;
     }
-
     .field label {
       display: block;
       color: #999;
@@ -584,7 +486,6 @@
       text-transform: uppercase;
       margin-bottom: 8px;
     }
-
     .field input,
     .field select,
     .field textarea {
@@ -596,23 +497,19 @@
       outline: none;
       border-radius: 2px;
     }
-
     .field input:focus,
     .field select:focus,
     .field textarea:focus {
       border-color: #8a7b72;
     }
-
     .field textarea {
       min-height: 100px;
       resize: vertical;
     }
-
     .payment-box {
       margin-top: 10px;
       margin-bottom: 25px;
     }
-
     .payment-title {
       color: #999;
       font-size: 10px;
@@ -620,13 +517,11 @@
       text-transform: uppercase;
       margin-bottom: 12px;
     }
-
     .payment-options {
       display: grid;
       grid-template-columns: repeat(3, 1fr);
       gap: 10px;
     }
-
     .payment-option {
       border: 1px solid #333;
       padding: 14px 10px;
@@ -635,21 +530,17 @@
       color: #aaa;
       transition: .2s;
     }
-
     .payment-option:hover {
       border-color: #777;
     }
-
     .payment-option.selected {
       border-color: #f2eee8;
       color: #fff;
       background: #191919;
     }
-
     .payment-option input {
       display: none;
     }
-
     .transfer-note {
       color: #888;
       font-size: 12px;
@@ -657,13 +548,11 @@
       margin-top: 12px;
       display: none;
     }
-
     .checkout-summary {
       border-top: 1px solid #333;
       margin-top: 25px;
       padding-top: 20px;
     }
-
     .summary-row {
       display: flex;
       justify-content: space-between;
@@ -671,7 +560,6 @@
       color: #aaa;
       font-size: 14px;
     }
-
     .summary-row.total {
       color: #fff;
       font-size: 19px;
@@ -679,7 +567,6 @@
       margin-top: 10px;
       padding-top: 18px;
     }
-
     .confirm-btn {
       width: 100%;
       padding: 17px;
@@ -690,12 +577,10 @@
       font-weight: bold;
       letter-spacing: 1px;
     }
-
     .confirm-btn:disabled {
       opacity: .5;
       cursor: not-allowed;
     }
-
     .checkout-message {
       margin-top: 15px;
       padding: 13px;
@@ -703,29 +588,24 @@
       font-size: 13px;
       line-height: 1.5;
     }
-
     .checkout-message.error {
       display: block;
       border: 1px solid #6d3434;
       color: #ffb5b5;
       background: rgba(100,20,20,.15);
     }
-
     .success-box {
       text-align: center;
       padding: 50px 20px;
     }
-
     .success-box h2 {
       font-size: 38px;
       margin-bottom: 15px;
     }
-
     .success-box p {
       color: #aaa;
       line-height: 1.8;
     }
-
     .order-number {
       margin: 25px 0;
       padding: 18px;
@@ -734,7 +614,6 @@
       letter-spacing: 1px;
       word-break: break-all;
     }
-
     .email-warning {
       margin-top: 20px;
       padding: 14px;
@@ -744,317 +623,202 @@
       font-size: 12px;
       line-height: 1.6;
     }
-
     @media (max-width: 850px) {
       .products {
         grid-template-columns: repeat(2, 1fr);
       }
-
       .details-grid {
         grid-template-columns: 1fr;
       }
-
       .details-photo {
         min-height: 380px;
       }
     }
-
     @media (max-width: 600px) {
       .products {
         grid-template-columns: 1fr;
       }
-
       .product-image {
         height: 390px;
       }
-
       .hero {
         min-height: 65vh;
       }
-
       .details-content {
         padding: 45px 25px;
       }
-
       .details-content h2 {
         font-size: 35px;
       }
-
       .cart-modal,
       .checkout-modal {
         padding: 25px 20px;
       }
-
       .checkout-grid {
         grid-template-columns: 1fr;
         gap: 0;
       }
-
       .field.full {
         grid-column: auto;
       }
-
       .payment-options {
         grid-template-columns: 1fr;
       }
-
       .shipping-banner {
         font-size: 10px;
         letter-spacing: 2px;
       }
-
       .about {
         padding: 70px 0;
       }
-
       .about-text {
         font-size: 16px;
       }
     }
   </style>
 </head>
-
 <body>
-
   <header>
     <div class="container nav">
       <a href="#" class="logo">
         OBSESSION
         <span>FRAGRANCE</span>
       </a>
-
-      <button
-        class="cart-btn"
-        onclick="openCart()"
-      >
+      <button class="cart-btn" onclick="openCart()">
         BAG <span id="cartCount">0</span>
       </button>
     </div>
   </header>
-
   <main>
-
     <section class="hero">
       <div>
-
         <div class="eyebrow">
           Obsession Fragrance
         </div>
-
         <h1>
           Obsession<br>
           Has A Scent.
         </h1>
-
         <p>
           Not A Perfume. An Obsession.
           Discover fragrances created for those who refuse to smell ordinary.
         </p>
-
-        <a
-          href="#collection"
-          class="hero-btn"
-        >
+        <a href="#collection" class="hero-btn">
           ENTER THE OBSESSION
         </a>
-
       </div>
     </section>
-
-    <!-- =========================
-         ORIGINAL BRAND STORY
-    ========================= -->
-
     <section class="about">
       <div class="container">
-
         <div class="section-title">
-
-          <small>
-            THE BEGINNING
-          </small>
-
+          <small>THE BEGINNING</small>
           <h2>
             We Didn't Want Another Perfume.
           </h2>
-
         </div>
-
         <p class="about-text">
           Two fragrance-obsessed minds who were never satisfied with ordinary performance decided to create something for themselves - and share the obsession with everyone who understands that fragrance is more than a scent.
         </p>
-
       </div>
     </section>
-
     <div class="shipping-banner">
       FREE SHIPPING
-      <span>
-        ABOVE 2000 EGP
-      </span>
+      <span>ABOVE 2000 EGP</span>
     </div>
-
     <section id="collection">
       <div class="container">
-
         <div class="section-title">
-
-          <small>
-            The Collection
-          </small>
-
+          <small>The Collection</small>
           <h2>
             Choose Your Obsession.
           </h2>
-
         </div>
-
-        <div
-          id="products"
-          class="products"
-        >
+        <div id="products" class="products">
           <div class="empty">
             Loading the collection...
           </div>
         </div>
-
       </div>
     </section>
-
   </main>
-
   <footer>
-
     <div>
       OBSESSION FRAGRANCE
     </div>
-
     <div style="margin-top:10px;">
       Not A Perfume . An Obsession
     </div>
-
     <div style="margin-top:15px;">
       FREE SHIPPING ABOVE 2000 EGP
     </div>
-
     <div style="margin-top:15px;">
       OBSESSION2027@gmail.com
     </div>
-
   </footer>
-
-  <!-- PRODUCT OVERLAY -->
-
-  <div
-    id="productOverlay"
-    class="overlay"
-  >
+  <div id="productOverlay" class="overlay">
     <div class="modal">
-
-      <button
-        class="close"
-        onclick="closeProduct()"
-      >
+      <button class="close" onclick="closeProduct()">
         ×
       </button>
-
       <div id="productDetails"></div>
-
     </div>
   </div>
-
-  <!-- CART OVERLAY -->
-
-  <div
-    id="cartOverlay"
-    class="overlay"
-  >
+  <div id="cartOverlay" class="overlay">
     <div class="cart-modal">
-
-      <button
-        class="close"
-        onclick="closeCart()"
-      >
+      <button class="close" onclick="closeCart()">
         ×
       </button>
-
       <h2>
         Your Bag
       </h2>
-
       <div class="cart-shipping-message">
         FREE SHIPPING ABOVE 2000 EGP
       </div>
-
       <div id="cartItems"></div>
-
       <div id="cartFooter"></div>
-
     </div>
   </div>
-
-  <!-- CHECKOUT OVERLAY -->
-
-  <div
-    id="checkoutOverlay"
-    class="overlay"
-  >
+  <div id="checkoutOverlay" class="overlay">
     <div class="checkout-modal">
-
-      <button
-        class="close"
-        onclick="closeCheckout()"
-      >
+      <button class="close" onclick="closeCheckout()">
         ×
       </button>
-
       <div id="checkoutContent"></div>
-
     </div>
   </div>
-
   <script>
-
     // =====================================================
     // SUPABASE
     // =====================================================
-
     const SUPABASE_URL =
       "https://rhgrrpmrcydqtysqwqzu.supabase.co";
-
     const SUPABASE_KEY =
       "sb_publishable_8hHu-y_TGbDR2pmSZnyNgQ_bJ4NgOIF";
-
     const supabaseClient =
       window.supabase.createClient(
         SUPABASE_URL,
         SUPABASE_KEY
       );
-
-
+    // =====================================================
+    // EMAIL EDGE FUNCTION
+    // =====================================================
+    const EMAIL_FUNCTION_URL =
+      "https://rhgrrpmrcydqtysqwqzu.supabase.co/functions/v1/Emails";
     // =====================================================
     // GLOBAL DATA
     // =====================================================
-
     let products = [];
-
     let cart =
       JSON.parse(
         localStorage.getItem("obsession_cart") || "[]"
       );
-
-
     // =====================================================
     // LOAD PRODUCTS
     // =====================================================
-
     async function loadProducts() {
-
       const container =
         document.getElementById("products");
-
       try {
-
         const {
           data,
           error
@@ -1066,57 +830,40 @@
             .order("created_at", {
               ascending: true
             });
-
         if (error) {
           throw error;
         }
-
         products = data || [];
-
         renderProducts();
-
         updateCartCount();
-
       } catch (error) {
-
         console.error(
           "Supabase error:",
           error
         );
-
         container.innerHTML = `
           <div class="empty">
             Unable to load the collection.
           </div>
         `;
-
       }
     }
-
-
     // =====================================================
     // RENDER PRODUCTS
     // =====================================================
-
     function renderProducts() {
-
       const container =
         document.getElementById("products");
-
       if (!products.length) {
-
         container.innerHTML = `
           <div class="empty">
             No fragrances available.
           </div>
         `;
-
         return;
       }
-
       container.innerHTML =
         products.map(product => {
-
           const image =
             product.image_url
               ? `
@@ -1130,10 +877,8 @@
                   OBSESSION
                 </span>
               `;
-
           return `
             <article class="product-card">
-
               <div
                 class="product-image"
                 onclick="openProduct(${product.id})"
@@ -1141,15 +886,12 @@
               >
                 ${image}
               </div>
-
               <div class="product-info">
-
                 <div class="gender">
                   ${escapeHtml(
                     product.gender || "Unisex"
                   )}
                 </div>
-
                 <div
                   class="product-name"
                   onclick="openProduct(${product.id})"
@@ -1157,60 +899,45 @@
                 >
                   ${escapeHtml(product.name)}
                 </div>
-
                 <div class="original">
                   Inspired by
                   ${escapeHtml(
                     product.original_name || ""
                   )}
                 </div>
-
                 <div class="price">
                   ${Number(product.price).toLocaleString()}
                   EGP
                 </div>
-
                 <div class="card-actions">
-
                   <button
                     class="details-btn"
                     onclick="openProduct(${product.id})"
                   >
                     VIEW
                   </button>
-
                   <button
                     class="add-btn"
                     onclick="addToCart(${product.id}, 1)"
                   >
                     ADD TO CART
                   </button>
-
                 </div>
-
               </div>
-
             </article>
           `;
-
         }).join("");
     }
-
-
     // =====================================================
     // PRODUCT DETAILS
     // =====================================================
-
     function openProduct(id) {
-
       const product =
         products.find(
           p =>
             Number(p.id) === Number(id)
         );
-
       if (!product) return;
-
       const image =
         product.image_url
           ? `
@@ -1224,197 +951,140 @@
               OBSESSION
             </span>
           `;
-
       document.getElementById(
         "productDetails"
       ).innerHTML = `
-
         <div class="details-grid">
-
           <div class="details-photo">
             ${image}
           </div>
-
           <div class="details-content">
-
             <div class="gender">
               ${escapeHtml(
                 product.gender || "Unisex"
               )}
             </div>
-
             <h2>
               ${escapeHtml(product.name)}
             </h2>
-
             <div class="details-original">
               Inspired by
               ${escapeHtml(
                 product.original_name || ""
               )}
             </div>
-
             <p class="details-description">
               ${escapeHtml(
                 product.description ||
                 "A signature Obsession fragrance created for unforgettable presence."
               )}
             </p>
-
             <div class="stats">
-
               <div class="stat">
                 <span>Volume</span>
                 <strong>50 ML</strong>
               </div>
-
               <div class="stat">
                 <span>Intensity</span>
                 <strong>High</strong>
               </div>
-
               <div class="stat">
                 <span>Projection</span>
                 <strong>Strong</strong>
               </div>
-
               <div class="stat">
                 <span>Longevity</span>
                 <strong>Long Lasting</strong>
               </div>
-
             </div>
-
             <div class="details-price">
               ${Number(product.price).toLocaleString()}
               EGP
             </div>
-
             <div class="quantity">
-
-              <button
-                onclick="changeDetailsQuantity(-1)"
-              >
+              <button onclick="changeDetailsQuantity(-1)">
                 −
               </button>
-
               <span id="detailsQuantity">
                 1
               </span>
-
-              <button
-                onclick="changeDetailsQuantity(1)"
-              >
+              <button onclick="changeDetailsQuantity(1)">
                 +
               </button>
-
             </div>
-
             <button
               class="big-add"
               onclick="addDetailsProduct(${product.id})"
             >
               ADD TO CART
             </button>
-
           </div>
-
         </div>
-
       `;
-
       window.currentDetailsProduct =
         product;
-
       window.currentDetailsQuantity =
         1;
-
       document
         .getElementById("productOverlay")
         .classList.add("active");
-
       document.body.style.overflow =
         "hidden";
     }
-
-
     function changeDetailsQuantity(amount) {
-
       window.currentDetailsQuantity =
         Math.max(
           1,
           (window.currentDetailsQuantity || 1) +
           amount
         );
-
       const element =
         document.getElementById(
           "detailsQuantity"
         );
-
       if (element) {
         element.textContent =
           window.currentDetailsQuantity;
       }
     }
-
-
     function addDetailsProduct(id) {
-
       const quantity =
         window.currentDetailsQuantity || 1;
-
       addToCart(
         id,
         quantity
       );
-
       closeProduct();
-
       openCart();
     }
-
-
     function closeProduct() {
-
       document
         .getElementById("productOverlay")
         .classList.remove("active");
-
       document.body.style.overflow =
         "";
     }
-
-
     // =====================================================
     // CART
     // =====================================================
-
     function addToCart(
       id,
       quantity = 1
     ) {
-
       const product =
         products.find(
           p =>
             Number(p.id) === Number(id)
         );
-
       if (!product) return;
-
       const existing =
         cart.find(
           item =>
             Number(item.id) === Number(id)
         );
-
       if (existing) {
-
         existing.quantity += quantity;
-
       } else {
-
         cart.push({
           id: product.id,
           name: product.name,
@@ -1423,193 +1093,131 @@
           image_url:
             product.image_url || ""
         });
-
       }
-
       saveCart();
-
       updateCartCount();
-
       showAddedMessage(
         product.name
       );
     }
-
-
     function removeFromCart(id) {
-
       cart =
         cart.filter(
           item =>
             Number(item.id) !== Number(id)
         );
-
       saveCart();
-
       renderCart();
-
       updateCartCount();
     }
-
-
     function changeCartQuantity(
       id,
       amount
     ) {
-
       const item =
         cart.find(
           item =>
             Number(item.id) === Number(id)
         );
-
       if (!item) return;
-
       item.quantity += amount;
-
       if (item.quantity <= 0) {
-
         removeFromCart(id);
-
         return;
       }
-
       saveCart();
-
       renderCart();
-
       updateCartCount();
     }
-
-
     function saveCart() {
-
       localStorage.setItem(
         "obsession_cart",
         JSON.stringify(cart)
       );
     }
-
-
     function updateCartCount() {
-
       const count =
         cart.reduce(
           (total, item) =>
             total + Number(item.quantity),
           0
         );
-
       const cartCount =
         document.getElementById(
           "cartCount"
         );
-
       if (cartCount) {
-
         cartCount.textContent =
           count;
       }
     }
-
-
     function openCart() {
-
       renderCart();
-
       document
         .getElementById("cartOverlay")
         .classList.add("active");
-
       document.body.style.overflow =
         "hidden";
     }
-
-
     function closeCart() {
-
       document
         .getElementById("cartOverlay")
         .classList.remove("active");
-
       document.body.style.overflow =
         "";
     }
-
-
     function renderCart() {
-
       const container =
         document.getElementById(
           "cartItems"
         );
-
       const footer =
         document.getElementById(
           "cartFooter"
         );
-
       if (!cart.length) {
-
         container.innerHTML = `
           <div class="empty">
             Your bag is empty.
           </div>
         `;
-
         footer.innerHTML = "";
-
         return;
       }
-
       container.innerHTML =
         cart.map(item => `
-
           <div class="cart-item">
-
             <div>
-
               <div class="cart-item-name">
                 ${escapeHtml(item.name)}
               </div>
-
               <div class="cart-item-price">
                 ${Number(item.price).toLocaleString()}
                 EGP
               </div>
-
             </div>
-
             <div class="cart-controls">
-
               <button
                 onclick="changeCartQuantity(${item.id}, -1)"
               >
                 −
               </button>
-
               <span>
                 ${item.quantity}
               </span>
-
               <button
                 onclick="changeCartQuantity(${item.id}, 1)"
               >
                 +
               </button>
-
               <button
                 onclick="removeFromCart(${item.id})"
               >
                 ×
               </button>
-
             </div>
-
           </div>
-
         `).join("");
-
       const subtotal =
         cart.reduce(
           (total, item) =>
@@ -1618,30 +1226,22 @@
             Number(item.quantity),
           0
         );
-
       const shipping =
         subtotal >= 2000
           ? 0
           : 150;
-
       const total =
         subtotal + shipping;
-
       footer.innerHTML = `
-
         <div class="cart-total">
-
           <span>
             Subtotal
           </span>
-
           <strong>
             ${subtotal.toLocaleString()}
             EGP
           </strong>
-
         </div>
-
         <div
           class="cart-total"
           style="
@@ -1651,11 +1251,9 @@
             font-size:15px;
           "
         >
-
           <span>
             Shipping
           </span>
-
           <strong>
             ${
               shipping === 0
@@ -1663,50 +1261,35 @@
                 : shipping.toLocaleString() + " EGP"
             }
           </strong>
-
         </div>
-
         <div class="cart-total">
-
           <span>
             Total
           </span>
-
           <strong>
             ${total.toLocaleString()}
             EGP
           </strong>
-
         </div>
-
         <button
           class="checkout-btn"
           onclick="startCheckout()"
         >
           CHECKOUT
         </button>
-
       `;
     }
-
-
     // =====================================================
     // CHECKOUT
     // =====================================================
-
     function startCheckout() {
-
       if (!cart.length) {
-
         alert(
           "Your bag is empty."
         );
-
         return;
       }
-
       closeCart();
-
       const subtotal =
         cart.reduce(
           (total, item) =>
@@ -1715,87 +1298,63 @@
             Number(item.quantity),
           0
         );
-
       const shipping =
         subtotal >= 2000
           ? 0
           : 150;
-
       const total =
         subtotal + shipping;
-
       document.getElementById(
         "checkoutContent"
       ).innerHTML = `
-
         <h2>
           Checkout
         </h2>
-
         <div class="checkout-subtitle">
           Complete your details to place your order.
         </div>
-
         <div class="checkout-shipping-message">
           FREE SHIPPING ABOVE 2000 EGP
         </div>
-
         <div class="checkout-grid">
-
           <div class="field">
-
             <label>
               Full Name *
             </label>
-
             <input
               id="customerName"
               type="text"
               placeholder="Your full name"
             >
-
           </div>
-
           <div class="field">
-
             <label>
               Phone *
             </label>
-
             <input
               id="customerPhone"
               type="tel"
               placeholder="01XXXXXXXXX"
             >
-
           </div>
-
           <div class="field">
-
             <label>
               Email
             </label>
-
             <input
               id="customerEmail"
               type="email"
               placeholder="your@email.com"
             >
-
           </div>
-
           <div class="field">
-
             <label>
               Governorate *
             </label>
-
             <select id="customerGovernorate">
-
               <option value="">
                 Select Governorate
               </option>
-
               <option>Cairo</option>
               <option>Giza</option>
               <option>Alexandria</option>
@@ -1821,112 +1380,77 @@
               <option>New Valley</option>
               <option>North Sinai</option>
               <option>South Sinai</option>
-
             </select>
-
           </div>
-
           <div class="field full">
-
             <label>
               Address *
             </label>
-
             <textarea
               id="customerAddress"
               placeholder="Full delivery address"
             ></textarea>
-
           </div>
-
         </div>
-
         <div class="payment-box">
-
           <div class="payment-title">
             Payment Method *
           </div>
-
           <div class="payment-options">
-
             <label
               class="payment-option selected"
               onclick="selectPayment(this, 'Cash on Delivery')"
             >
-
               <input
                 type="radio"
                 name="payment"
                 value="Cash on Delivery"
                 checked
               >
-
               Cash on Delivery
-
             </label>
-
             <label
               class="payment-option"
               onclick="selectPayment(this, 'InstaPay')"
             >
-
               <input
                 type="radio"
                 name="payment"
                 value="InstaPay"
               >
-
               InstaPay
-
             </label>
-
             <label
               class="payment-option"
               onclick="selectPayment(this, 'Wallet')"
             >
-
               <input
                 type="radio"
                 name="payment"
                 value="Wallet"
               >
-
               Wallet
-
             </label>
-
           </div>
-
           <div
             id="transferNote"
             class="transfer-note"
           >
             Transfer screenshot upload will be enabled in the next step.
           </div>
-
         </div>
-
         <div class="checkout-summary">
-
           <div class="summary-row">
-
-            <span>
-              Subtotal
-            </span>
-
+            <span>Subtotal</span>
             <strong>
               ${subtotal.toLocaleString()}
               EGP
             </strong>
-
           </div>
-
           <div class="summary-row">
-
             <span>
               Shipping
             </span>
-
             <strong>
               ${
                 shipping === 0
@@ -1934,41 +1458,29 @@
                   : shipping.toLocaleString() + " EGP"
               }
             </strong>
-
           </div>
-
           <div class="summary-row">
-
             <span>
               Discount
             </span>
-
             <strong>
               0 EGP
             </strong>
-
           </div>
-
           <div class="summary-row total">
-
             <span>
               Total
             </span>
-
             <strong>
               ${total.toLocaleString()}
               EGP
             </strong>
-
           </div>
-
         </div>
-
         <div
           id="checkoutMessage"
           class="checkout-message"
         ></div>
-
         <button
           id="confirmOrderBtn"
           class="confirm-btn"
@@ -1976,297 +1488,227 @@
         >
           CONFIRM ORDER
         </button>
-
       `;
-
       document
         .getElementById("checkoutOverlay")
         .classList.add("active");
-
       document.body.style.overflow =
         "hidden";
     }
-
-
     // =====================================================
     // PAYMENT
     // =====================================================
-
     function selectPayment(
       element,
       payment
     ) {
-
       document
         .querySelectorAll(".payment-option")
         .forEach(option => {
-
           option.classList.remove(
             "selected"
           );
-
         });
-
       element.classList.add(
         "selected"
       );
-
       const radio =
         element.querySelector(
           'input[type="radio"]'
         );
-
       if (radio) {
-
         radio.checked = true;
-
       }
-
       const note =
         document.getElementById(
           "transferNote"
         );
-
       if (
         payment === "InstaPay" ||
         payment === "Wallet"
       ) {
-
         note.style.display =
           "block";
-
       } else {
-
         note.style.display =
           "none";
-
       }
     }
-
-
     // =====================================================
     // CLOSE CHECKOUT
     // =====================================================
-
     function closeCheckout() {
-
       document
         .getElementById("checkoutOverlay")
         .classList.remove("active");
-
       document.body.style.overflow =
         "";
     }
-
-
     // =====================================================
     // SEND ORDER EMAIL
     // =====================================================
-
     async function sendOrderEmail(
       orderId,
       orderData
     ) {
-
       console.log(
-        "Calling send-order-email..."
+        "Calling Emails Edge Function..."
       );
-
-      const {
-        data,
-        error
-      } =
-        await supabaseClient.functions.invoke(
-          "send-order-email",
+      const response =
+        await fetch(
+          EMAIL_FUNCTION_URL,
           {
-            body: {
-
+            method: "POST",
+            headers: {
+              "Content-Type":
+                "application/json",
+              "apikey":
+                SUPABASE_KEY,
+              "Authorization":
+                `Bearer ${SUPABASE_KEY}`
+            },
+            body: JSON.stringify({
               order_id:
                 orderId,
-
               customer_name:
                 orderData.customer_name,
-
               phone:
                 orderData.phone,
-
               email:
                 orderData.email || "",
-
               governorate:
                 orderData.governorate,
-
               address:
                 orderData.address,
-
               payment_method:
                 orderData.payment_method,
-
               subtotal:
                 orderData.subtotal,
-
               shipping:
                 orderData.shipping,
-
               discount:
                 orderData.discount,
-
               total:
                 orderData.total,
-
               items:
                 orderData.items || []
-
-            }
+            })
           }
         );
-
+      const responseText =
+        await response.text();
       console.log(
-        "EMAIL FUNCTION RESULT:",
-        data
+        "EMAIL FUNCTION STATUS:",
+        response.status
       );
-
       console.log(
-        "EMAIL FUNCTION ERROR:",
-        error
+        "EMAIL FUNCTION RESPONSE:",
+        responseText
       );
-
-      if (error) {
-
-        throw new Error(
-          error.message ||
-          "Unable to connect to email function."
+      let data = null;
+      try {
+        data =
+          JSON.parse(
+            responseText
+          );
+      } catch (parseError) {
+        console.error(
+          "EMAIL RESPONSE IS NOT JSON:",
+          parseError
         );
-
       }
-
+      if (!response.ok) {
+        throw new Error(
+          data?.error ||
+          data?.message ||
+          responseText ||
+          `Email function returned HTTP ${response.status}`
+        );
+      }
       if (
         !data ||
         data.success !== true
       ) {
-
         throw new Error(
           data?.error ||
           data?.message ||
           "Email function failed."
         );
-
       }
-
       return data;
     }
-
-
     // =====================================================
     // SUBMIT ORDER
     // =====================================================
-
     async function submitOrder() {
-
       const name =
         document.getElementById(
           "customerName"
         ).value.trim();
-
       const phone =
         document.getElementById(
           "customerPhone"
         ).value.trim();
-
       const email =
         document.getElementById(
           "customerEmail"
         ).value.trim();
-
       const governorate =
         document.getElementById(
           "customerGovernorate"
         ).value;
-
       const address =
         document.getElementById(
           "customerAddress"
         ).value.trim();
-
       const paymentElement =
         document.querySelector(
           'input[name="payment"]:checked'
         );
-
       const paymentMethod =
         paymentElement
           ? paymentElement.value
           : "";
-
       const button =
         document.getElementById(
           "confirmOrderBtn"
         );
-
-
-      // =========================
-      // VALIDATION
-      // =========================
-
       if (!name) {
-
         showCheckoutError(
           "Please enter your full name."
         );
-
         return;
       }
-
       if (!phone) {
-
         showCheckoutError(
           "Please enter your phone number."
         );
-
         return;
       }
-
       if (!governorate) {
-
         showCheckoutError(
           "Please select your governorate."
         );
-
         return;
       }
-
       if (!address) {
-
         showCheckoutError(
           "Please enter your full address."
         );
-
         return;
       }
-
       if (!paymentMethod) {
-
         showCheckoutError(
           "Please select a payment method."
         );
-
         return;
       }
-
       if (!cart.length) {
-
         showCheckoutError(
           "Your bag is empty."
         );
-
         return;
       }
-
-
-      // =========================
-      // CALCULATE TOTALS
-      // =========================
-
       const subtotal =
         cart.reduce(
           (total, item) =>
@@ -2275,60 +1717,38 @@
             Number(item.quantity),
           0
         );
-
       const shipping =
         subtotal >= 2000
           ? 0
           : 150;
-
       const discount =
         0;
-
       const total =
         subtotal +
         shipping -
         discount;
-
-
       button.disabled =
         true;
-
       button.textContent =
         "PLACING ORDER...";
-
-
       try {
-
-        // ==========================================
-        // PREPARE ORDER ITEMS
-        // ==========================================
-
         const orderItems =
           cart.map(item => ({
-
             product_id:
               Number(item.id),
-
             product_name:
               item.name,
-
             quantity:
               Number(item.quantity),
-
             price:
               Number(item.price),
-
             total:
               Number(item.price) *
               Number(item.quantity)
-
           }));
-
-
         // ==========================================
         // CREATE ORDER + ITEMS
         // ==========================================
-
         const {
           data: orderId,
           error
@@ -2336,187 +1756,123 @@
           await supabaseClient.rpc(
             "create_order_with_items",
             {
-
               p_customer_name:
                 name,
-
               p_phone:
                 phone,
-
               p_email:
                 email || null,
-
               p_governorate:
                 governorate,
-
               p_address:
                 address,
-
               p_payment_method:
                 paymentMethod,
-
               p_transfer_image_url:
                 null,
-
               p_subtotal:
                 subtotal,
-
               p_shipping:
                 shipping,
-
               p_discount:
                 discount,
-
               p_total:
                 total,
-
               p_status:
                 "pending",
-
               p_notes:
                 null,
-
               p_items:
                 orderItems
-
             }
           );
-
-
         if (error) {
-
           console.error(
             "CREATE ORDER ERROR:",
             error
           );
-
           throw error;
-
         }
-
-
         // ==========================================
         // SEND ORDER EMAIL
         // ==========================================
-
         let emailSent =
           false;
-
         let emailErrorMessage =
           "";
-
-
         try {
-
           await sendOrderEmail(
             orderId,
             {
-
               customer_name:
                 name,
-
               phone:
                 phone,
-
               email:
                 email,
-
               governorate:
                 governorate,
-
               address:
                 address,
-
               payment_method:
                 paymentMethod,
-
               subtotal:
                 subtotal,
-
               shipping:
                 shipping,
-
               discount:
                 discount,
-
               total:
                 total,
-
               items:
                 orderItems
-
             }
           );
-
-
           emailSent =
             true;
-
-
           console.log(
             "ORDER EMAIL SENT SUCCESSFULLY"
           );
-
-
         } catch (emailError) {
-
           console.error(
             "ORDER EMAIL FAILED:",
             emailError
           );
-
           emailErrorMessage =
             emailError?.message ||
             String(emailError);
-
         }
-
-
         // ==========================================
         // CLEAR CART
         // ==========================================
-
         cart = [];
-
         saveCart();
-
         updateCartCount();
-
-
         // ==========================================
         // SUCCESS
         // ==========================================
-
         document.getElementById(
           "checkoutContent"
         ).innerHTML = `
-
           <div class="success-box">
-
             <div class="eyebrow">
               Order Confirmed
             </div>
-
             <h2>
               Thank You.
             </h2>
-
             <p>
               Your Obsession has been received.
             </p>
-
             <div class="order-number">
               ORDER #${orderId}
             </div>
-
             <p>
               We will contact you soon to confirm your order.
             </p>
-
             ${
               emailSent
                 ? `
-
                   <div
                     style="
                       margin-top:20px;
@@ -2529,147 +1885,100 @@
                   >
                     Order notification sent successfully.
                   </div>
-
                 `
                 : `
-
                   <div class="email-warning">
-
                     Your order was created successfully, but the email notification could not be sent.
-
                     <br><br>
-
                     The order itself is safe and has been saved.
-
                     <br>
-
                     Email error:
                     ${escapeHtml(emailErrorMessage)}
-
                   </div>
-
                 `
             }
-
             <button
               class="confirm-btn"
               onclick="closeCheckout()"
             >
               CONTINUE SHOPPING
             </button>
-
           </div>
-
         `;
-
-
       } catch (error) {
-
         console.error(
           "FULL ORDER ERROR:",
           error
         );
-
         showCheckoutError(
           error?.message ||
           "Something went wrong while placing the order."
         );
-
         button.disabled =
           false;
-
         button.textContent =
           "CONFIRM ORDER";
-
       }
-
     }
-
-
     // =====================================================
     // CHECKOUT ERROR
     // =====================================================
-
     function showCheckoutError(
       text
     ) {
-
       const message =
         document.getElementById(
           "checkoutMessage"
         );
-
       if (!message) return;
-
       message.textContent =
         text;
-
       message.className =
         "checkout-message error";
     }
-
-
     // =====================================================
     // HELPERS
     // =====================================================
-
     function showAddedMessage(
       name
     ) {
-
       console.log(
         name +
         " added to cart."
       );
-
     }
-
-
     function escapeHtml(
       value
     ) {
-
       return String(
         value ?? ""
       )
-
         .replace(
           /&/g,
           "&amp;"
         )
-
         .replace(
           /</g,
           "&lt;"
         )
-
         .replace(
           />/g,
           "&gt;"
         )
-
         .replace(
           /"/g,
           "&quot;"
         )
-
         .replace(
           /'/g,
           "&#039;"
         );
-
     }
-
-
     // =====================================================
     // START
     // =====================================================
-
     loadProducts();
-
     updateCartCount();
-
   </script>
-
 </body>
 </html>
